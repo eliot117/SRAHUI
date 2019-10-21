@@ -14,18 +14,14 @@ class NotasController extends Controller
         return view('notas.index', compact('notas'));
     }
 
-    public function create()
+    public function crear()
     {
-        //
+        return view('notas.crear');
     }
 
     public function eliminar($id)
     {
-        if(auth()->user()->can('eliminar-notas'))
-        {
-            Nota::findOrFail($id)->delete();
-            return redirect()->back();
-        }
-        abort(403);
+        Nota::findOrFail($id)->delete();
+        return redirect()->back();
     }
 }
