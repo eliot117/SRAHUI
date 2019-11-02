@@ -263,7 +263,7 @@ desired effect
         <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Manejo de Roles</span></a></li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Manejo de Permisos</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Manejo de Usurios</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <a href="#"><i class="fa fa-link"></i> <span>Manejo de Usuarios</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
             <li><a href="#">Crear Usuario</a></li>
             <li><a href="#">Lista de Usuarios</a></li>
