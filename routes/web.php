@@ -14,12 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('notas','NotasController@index');
-Route::get('notas/crear','NotasController@crear')->middleware('permiso:crear-notas');
-Route::group(['middleware' =>['permiso:eliminar-notas']], function(){
-    Route::get('notas/{id}/eliminar','NotasController@eliminar')->name('notas.eliminar');
-});
