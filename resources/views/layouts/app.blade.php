@@ -19,7 +19,8 @@
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect.
   -->
-  <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="{{ asset('dist/css/skins/skin-blue.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('css/style.css')}}">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -260,20 +261,20 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Manejo de Roles</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Manejo de Permisos</span></a></li>
+      <li class="active"><a href="{{ route('roles.index') }}"><i class="fa fa-link"></i> <span>Manejo de Roles</span></a></li>
+      <li><a href="{{ route('permissions.index')}}"><i class="fa fa-link"></i> <span>Manejo de Permisos</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Manejo de Usuarios</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li><a href="#">Crear Usuario</a></li>
-            <li><a href="#">Lista de Usuarios</a></li>
+          <li><a href="{{ route('users.create') }}">Crear Usuario</a></li>
+          <li><a href="{{ route('users.index') }}">Lista de Usuarios</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Lista de Cultivos</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li><a href="#">Crear Cultivo</a></li>
-            <li><a href="#">Lista de Cultivos</a></li>
+          <li><a href="{{ route('posts.create') }}">Crear Cultivo</a></li>
+          <li><a href="{{ route('posts.index') }}">Lista de Cultivos</a></li>
           </ul>
         </li>
       </ul>
@@ -380,11 +381,11 @@ desired effect
 <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 2.2.0 -->
-<script src="plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<script src="{{ asset('plugins/jQuery/jQuery-2.2.0.min.js') }}"></script>
 <!-- Bootstrap 3.3.6 -->
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/app.min.js"></script>
+<script src="{{ asset('dist/js/app.min.js') }}"></script>
 
 </body>
 </html>
