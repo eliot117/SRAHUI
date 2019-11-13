@@ -14,12 +14,19 @@ class CultivosController extends Controller
 
     public function create()
     {
-        //
+        return View('layouts.cultivos');
     }
 
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name_scientific' => 'required|max:255',
+            'name'            => 'required|max:255',
+            'description'     => 'required|max:255',
+        ]);
+        \App\Form::create($validatedData);
+
+        return response()->json('Datos Guardados');
     }
 
     public function show($id)
