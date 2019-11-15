@@ -10,8 +10,10 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -64,7 +66,7 @@
               <span class="label label-success">4</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
+              <li class="header">Tienes 4 Mensajes</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
@@ -74,10 +76,10 @@
                         <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
-                        Support Team
-                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                        Mario Martinez
+                        <small><i class="fa fa-clock-o"></i> 1 mins</small>
                       </h4>
-                      <p>Why not buy a new awesome theme?</p>
+                      <p>Ya ingresaste nuevos cultivos?</p>
                     </a>
                   </li>
                   <!-- end message -->
@@ -87,10 +89,10 @@
                         <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
-                        AdminLTE Design Team
-                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                        Laura Lisbeth
+                        <small><i class="fa fa-clock-o"></i>1 hora</small>
                       </h4>
-                      <p>Why not buy a new awesome theme?</p>
+                      <p>¿Como están los cultivos?</p>
                     </a>
                   </li>
                   <li>
@@ -99,76 +101,46 @@
                         <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
-                        Developers
-                        <small><i class="fa fa-clock-o"></i> Today</small>
+                        Samantha
+                        <small><i class="fa fa-clock-o"></i>3 horas</small>
                       </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Sales Department
-                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Reviewers
-                        <small><i class="fa fa-clock-o"></i> 2 days</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
+                      <p>No olvides regar los cultivos</p>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class="footer"><a href="#">See All Messages</a></li>
+              <li class="footer"><a href="#">Todos los mensajes</a></li>
             </ul>
           </li>
           <!-- Notifications: style can be found in dropdown.less -->
           <li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
+              <span class="label label-warning">5</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
+              <li class="header">Tu tienes 5 notificaciones</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li>
                     <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                      <i class="fa fa-warning text-yellow"></i> Avertencia no se ha regados los cultivos
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                      page and may cause design problems
+                      <i class="fa fa-users text-red"></i> 5 Nuevos estudiantes registrados 
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-users text-red"></i> 5 new members joined
+                      <i class="fa fa-shopping-cart text-green"></i> 5 Cultivos nuevos
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-user text-red"></i> You changed your username
+                      <i class="fa fa-user text-red"></i> Cambia tu nombre de usuario
                     </a>
                   </li>
                 </ul>
@@ -180,17 +152,17 @@
           <li class="dropdown tasks-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
+              <span class="label label-danger">4</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
+              <li class="header">Tu tienes 4 treas pendientes</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li><!-- Task item -->
                     <a href="#">
                       <h3>
-                        Design some buttons
+                        Humedad del Tomate
                         <small class="pull-right">20%</small>
                       </h3>
                       <div class="progress xs">
@@ -204,7 +176,7 @@
                   <li><!-- Task item -->
                     <a href="#">
                       <h3>
-                        Create a nice theme
+                        Tomate cantidad de agua
                         <small class="pull-right">40%</small>
                       </h3>
                       <div class="progress xs">
@@ -218,35 +190,20 @@
                   <li><!-- Task item -->
                     <a href="#">
                       <h3>
-                        Some task I need to do
-                        <small class="pull-right">60%</small>
+                        Temperatura del Rabano
+                        <small class="pull-right">32°</small>
                       </h3>
                       <div class="progress xs">
-                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">60% Complete</span>
+                        <div class="progress-bar progress-bar-red" style="width: 32%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">32% Complete</span>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <h3>
-                        Make beautiful transitions
-                        <small class="pull-right">80%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">80% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
                 </ul>
               </li>
               <li class="footer">
-                <a href="#">View all tasks</a>
+                <a href="#">Todas las tareas</a>
               </li>
             </ul>
           </li>
@@ -267,7 +224,7 @@
                 </p>
               </li>
               <!-- Menu Body -->
-              <li class="user-body">
+             <!-- <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
                     <a href="#">Followers</a>
@@ -279,7 +236,7 @@
                     <a href="#">Friends</a>
                   </div>
                 </div>
-                <!-- /.row -->
+              --> <!-- /.row -->
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
@@ -315,7 +272,7 @@
         </div>
         <div class="pull-left info">
           <p>{{ Auth::user()->name }}</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <a href="#"><i class="fa fa-circle text-success"></i> Conectado</a>
         </div>
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -328,8 +285,8 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i>Lista de Usuarios</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i>Crear Usuarios</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Lista de Usuarios</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Crear Usuarios</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -338,9 +295,8 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Roles</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Permisos</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -350,7 +306,7 @@
           </a>
           <ul class="treeview-menu">
           <li><a href="{{ route('cultivos') }}"><i class="fa fa-circle-o"></i> Inserte cultivo</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>Lista de Cultivos</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Lista de Cultivos</a></li>
           </ul>
         </li>
       </ul>
@@ -368,87 +324,23 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
+        <li class="active">Panel Administrativo</li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
-      <!-- Small boxes (Stat box) -->
-      <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>150</h3>
-
-              <p>New Orders</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-              <p>Bounce Rate</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>44</h3>
-
-              <p>User Registrations</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>65</h3>
-
-              <p>Unique Visitors</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-      </div>
-      <!-- /.row -->
       <!-- Main row -->
       <div class="row">
         <!-- Left col -->
-        <section class="col-lg-7 connectedSortable">
+        <section class="col-lg-12 connectedSortable">
           <!-- Custom tabs (Charts with tabs)-->
           <div class="nav-tabs-custom">
             <!-- Tabs within a box -->
             <ul class="nav nav-tabs pull-right">
-              <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-              <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-              <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
+              <li class="active"><a href="#revenue-chart" data-toggle="tab">Cultivos Años</a></li>
+              <li><a href="#sales-chart" data-toggle="tab">Grafica Circular</a></li>
+              <li class="pull-left header"><i class="fa fa-inbox"></i> Cultivos</li>
             </ul>
             <div class="tab-content no-padding">
               <!-- Morris chart - Sales -->
@@ -463,12 +355,11 @@
             <div class="box-header">
               <i class="fa fa-comments-o"></i>
 
-              <h3 class="box-title">Chat</h3>
+              <h3 class="box-title">Clase Chat</h3>
 
               <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
                 <div class="btn-group" data-toggle="btn-toggle">
-                  <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i>
-                  </button>
+                  <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i></button>
                   <button type="button" class="btn btn-default btn-sm"><i class="fa fa-square text-red"></i></button>
                 </div>
               </div>
@@ -480,25 +371,11 @@
 
                 <p class="message">
                   <a href="#" class="name">
-                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                    Mike Doe
+                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 14:15</small>
+                    Samantha
                   </a>
-                  I would like to meet you to discuss the latest news about
-                  the arrival of the new theme. They say it is going to be one the
-                  best themes on the market
+                 ¿Que indicaciones debemos tomar respecto al cuidado de los cultivos?
                 </p>
-                <div class="attachment">
-                  <h4>Attachments:</h4>
-
-                  <p class="filename">
-                    Theme-thumbnail-image.jpg
-                  </p>
-
-                  <div class="pull-right">
-                    <button type="button" class="btn btn-primary btn-sm btn-flat">Open</button>
-                  </div>
-                </div>
-                <!-- /.attachment -->
               </div>
               <!-- /.item -->
               <!-- chat item -->
@@ -507,12 +384,10 @@
 
                 <p class="message">
                   <a href="#" class="name">
-                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
-                    Alexander Pierce
+                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 15:15</small>
+                    Laura Lisbeth
                   </a>
-                  I would like to meet you to discuss the latest news about
-                  the arrival of the new theme. They say it is going to be one the
-                  best themes on the market
+                  ¿El cultivo de tomate tiene poca agua?
                 </p>
               </div>
               <!-- /.item -->
@@ -522,12 +397,10 @@
 
                 <p class="message">
                   <a href="#" class="name">
-                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
-                    Susan Doe
+                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 16:30</small>
+                    {{ Auth::user()->name }}
                   </a>
-                  I would like to meet you to discuss the latest news about
-                  the arrival of the new theme. They say it is going to be one the
-                  best themes on the market
+                  Enterado ya reviso.
                 </p>
               </div>
               <!-- /.item -->
@@ -535,7 +408,7 @@
             <!-- /.chat -->
             <div class="box-footer">
               <div class="input-group">
-                <input class="form-control" placeholder="Type message...">
+                <input class="form-control" placeholder="Escriba su mensaje...">
 
                 <div class="input-group-btn">
                   <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
@@ -550,7 +423,7 @@
             <div class="box-header">
               <i class="ion ion-clipboard"></i>
 
-              <h3 class="box-title">To Do List</h3>
+              <h3 class="box-title">Lista de tareas a realizar</h3>
 
               <div class="box-tools pull-right">
                 <ul class="pagination pagination-sm inline">
@@ -574,9 +447,9 @@
                   <!-- checkbox -->
                   <input type="checkbox" value="">
                   <!-- todo text -->
-                  <span class="text">Design a nice theme</span>
+                  <span class="text">Regar el cultivo de Tomate</span>
                   <!-- Emphasis label -->
-                  <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+                  <small class="label label-danger"><i class="fa fa-clock-o"></i> 5 mins</small>
                   <!-- General tools such as edit or delete-->
                   <div class="tools">
                     <i class="fa fa-edit"></i>
@@ -589,8 +462,8 @@
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                   <input type="checkbox" value="">
-                  <span class="text">Make the theme responsive</span>
-                  <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+                  <span class="text">Regar plantacion de cultivos</span>
+                  <small class="label label-info"><i class="fa fa-clock-o"></i> 4 horas</small>
                   <div class="tools">
                     <i class="fa fa-edit"></i>
                     <i class="fa fa-trash-o"></i>
@@ -602,7 +475,7 @@
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                   <input type="checkbox" value="">
-                  <span class="text">Let theme shine like a star</span>
+                  <span class="text">5 Nuevos cultivos añadidos</span>
                   <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
                   <div class="tools">
                     <i class="fa fa-edit"></i>
@@ -615,34 +488,8 @@
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                   <input type="checkbox" value="">
-                  <span class="text">Let theme shine like a star</span>
+                  <span class="text">Cambie su nombre de usuario</span>
                   <small class="label label-success"><i class="fa fa-clock-o"></i> 3 days</small>
-                  <div class="tools">
-                    <i class="fa fa-edit"></i>
-                    <i class="fa fa-trash-o"></i>
-                  </div>
-                </li>
-                <li>
-                      <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                  <input type="checkbox" value="">
-                  <span class="text">Check your messages and notifications</span>
-                  <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 week</small>
-                  <div class="tools">
-                    <i class="fa fa-edit"></i>
-                    <i class="fa fa-trash-o"></i>
-                  </div>
-                </li>
-                <li>
-                      <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                  <input type="checkbox" value="">
-                  <span class="text">Let theme shine like a star</span>
-                  <small class="label label-default"><i class="fa fa-clock-o"></i> 1 month</small>
                   <div class="tools">
                     <i class="fa fa-edit"></i>
                     <i class="fa fa-trash-o"></i>
@@ -652,99 +499,19 @@
             </div>
             <!-- /.box-body -->
             <div class="box-footer clearfix no-border">
-              <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
+              <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i>Agregar Tarea</button>
             </div>
           </div>
           <!-- /.box -->
-
-          <!-- quick email widget -->
-          <div class="box box-info">
-            <div class="box-header">
-              <i class="fa fa-envelope"></i>
-
-              <h3 class="box-title">Quick Email</h3>
-              <!-- tools box -->
-              <div class="pull-right box-tools">
-                <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove">
-                  <i class="fa fa-times"></i></button>
-              </div>
-              <!-- /. tools -->
-            </div>
-            <div class="box-body">
-              <form action="#" method="post">
-                <div class="form-group">
-                  <input type="email" class="form-control" name="emailto" placeholder="Email to:">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject">
-                </div>
-                <div>
-                  <textarea class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                </div>
-              </form>
-            </div>
-            <div class="box-footer clearfix">
-              <button type="button" class="pull-right btn btn-default" id="sendEmail">Send
-                <i class="fa fa-arrow-circle-right"></i></button>
-            </div>
-          </div>
-
         </section>
         <!-- /.Left col -->
         <!-- right col (We are only adding the ID to make the widgets sortable)-->
-        <section class="col-lg-5 connectedSortable">
-
-          <!-- Map box -->
-          <div class="box box-solid bg-light-blue-gradient">
-            <div class="box-header">
-              <!-- tools box -->
-              <div class="pull-right box-tools">
-                <button type="button" class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip" title="Date range">
-                  <i class="fa fa-calendar"></i></button>
-                <button type="button" class="btn btn-primary btn-sm pull-right" data-widget="collapse" data-toggle="tooltip" title="Collapse" style="margin-right: 5px;">
-                  <i class="fa fa-minus"></i></button>
-              </div>
-              <!-- /. tools -->
-
-              <i class="fa fa-map-marker"></i>
-
-              <h3 class="box-title">
-                Visitors
-              </h3>
-            </div>
-            <div class="box-body">
-              <div id="world-map" style="height: 250px; width: 100%;"></div>
-            </div>
-            <!-- /.box-body-->
-            <div class="box-footer no-border">
-              <div class="row">
-                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                  <div id="sparkline-1"></div>
-                  <div class="knob-label">Visitors</div>
-                </div>
-                <!-- ./col -->
-                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                  <div id="sparkline-2"></div>
-                  <div class="knob-label">Online</div>
-                </div>
-                <!-- ./col -->
-                <div class="col-xs-4 text-center">
-                  <div id="sparkline-3"></div>
-                  <div class="knob-label">Exists</div>
-                </div>
-                <!-- ./col -->
-              </div>
-              <!-- /.row -->
-            </div>
-          </div>
-          <!-- /.box -->
-
-          <!-- solid sales graph -->
+        <section class="col-lg-12 connectedSortable">
           <div class="box box-solid bg-teal-gradient">
             <div class="box-header">
               <i class="fa fa-th"></i>
 
-              <h3 class="box-title">Sales Graph</h3>
+              <h3 class="box-title">Tasa de cultivos por año</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -762,19 +529,19 @@
                 <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
                   <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC">
 
-                  <div class="knob-label">Mail-Orders</div>
+                  <div class="knob-label">Cultivos</div>
                 </div>
                 <!-- ./col -->
                 <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
                   <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC">
 
-                  <div class="knob-label">Online</div>
+                  <div class="knob-label">Temperatura</div>
                 </div>
                 <!-- ./col -->
                 <div class="col-xs-4 text-center">
                   <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#39CCCC">
 
-                  <div class="knob-label">In-Store</div>
+                  <div class="knob-label">Humedad</div>
                 </div>
                 <!-- ./col -->
               </div>
@@ -815,49 +582,6 @@
               <!--The calendar -->
               <div id="calendar" style="width: 100%"></div>
             </div>
-            <!-- /.box-body -->
-            <div class="box-footer text-black">
-              <div class="row">
-                <div class="col-sm-6">
-                  <!-- Progress bars -->
-                  <div class="clearfix">
-                    <span class="pull-left">Task #1</span>
-                    <small class="pull-right">90%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
-                  </div>
-
-                  <div class="clearfix">
-                    <span class="pull-left">Task #2</span>
-                    <small class="pull-right">70%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
-                  </div>
-                </div>
-                <!-- /.col -->
-                <div class="col-sm-6">
-                  <div class="clearfix">
-                    <span class="pull-left">Task #3</span>
-                    <small class="pull-right">60%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 60%;"></div>
-                  </div>
-
-                  <div class="clearfix">
-                    <span class="pull-left">Task #4</span>
-                    <small class="pull-right">40%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 40%;"></div>
-                  </div>
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
-            </div>
           </div>
           <!-- /.box -->
 
@@ -880,6 +604,7 @@
 <script src="plugins/jQuery/jQuery-2.2.0.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button);
@@ -888,6 +613,7 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="js/raphel-min.js"></script>
 <script src="plugins/morris/morris.min.js"></script>
 <!-- Sparkline -->
 <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
@@ -898,6 +624,7 @@
 <script src="plugins/knob/jquery.knob.js"></script>
 <!-- daterangepicker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="js/moment.js"></script>
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
 <!-- datepicker -->
 <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
