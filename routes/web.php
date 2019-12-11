@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,8 +9,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/cultivos', 'CultivosController@index')->name('cultivos');
-/*
-Route::get('/cultivos', 'CultivosController@index' )->name('cultivos.create');
-Route::post('/cultivos', 'CultivosController@create')->name('cultivos.store');
-*/
+Route::get('crops',['as'=>'crops.index','uses'=> 'CropsController@index']);
+Route::get('crops/create',['as'=>'crops.create','uses'=> 'CropsController@create']);
+Route::post('crops',['as'=>'crops.store','uses'=> 'CropsController@store']);
+Route::get('crops/{id}',['as'=>'crops.show','uses'=> 'CropsController@show']);
+Route::get('crops/{id}/edit',['as'=>'crops.edit','uses'=> 'CropsController@edit']);
+
+//Route::resource('crops', 'CropsController');

@@ -1,0 +1,23 @@
+body{
+    background-color: palegreen;
+}
+
+.top-right,links{
+    font-family: Arial;
+    font-style: normal;
+    font-size: 15px;
+    color: black;
+}
+
+.content{
+    font-family: Arial;
+    font-style: normal;
+    color: black;
+}
+
+footer{
+    font-display: Arial;
+    font-style: italic;
+    color: black;
+    
+}
