@@ -1,4 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.app2')
+@extends('layouts.header')
+@extends('layouts.aside')
+@extends('layouts.wraper')
 
 @section('content')
     <h1>Cultivo</h1>
