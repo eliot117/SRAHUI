@@ -38,7 +38,7 @@
             @enderror
           </div>
           <div class="form-group">
-            <label for="file">Nombre</label>
+            <label for="file">Imagen</label>
             <input type="file" name="imagen" class="form-control" placeholder="Ingrese una imagen" value="{{ old('imagen') }}">
             @error('imagen')
               <span class="invalid-feedback" role="alert">

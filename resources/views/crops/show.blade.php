@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Cultivo</h1>
-
-    <p>Nombre:           {{ $crops->name }}</p>
-    <p>Nombre Cientifico: {{ $crops->name_scientific }}</p>
-    <p>Descripcion: {{ $crops->description }}</p>
+<div class="box">
+    <div class="box-header with-border">
+      <h3 class="box-title">Cultivo</h3>
+    </div>
+    <div class="box-body">
+      <p>Nombre:            {{ $crops->name }}</p>
+      <p>Nombre Cientifico: {{ $crops->name_scientific }}</p>
+      <p>Descripcion:       {{ $crops->description }}</p>
+      <p>imagen: {{ $crops->imagen}}</p> 
+    </div>
+    <!-- /.box-body -->
+</div>
 @endsection

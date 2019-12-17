@@ -28,13 +28,13 @@ class CropsController extends Controller
     public function show($id)
     {
         $crops = Crop::findOrFail($id);
-        return view('crops.show', compact('crop'));
+        return view('crops.show', compact('crops'));
     }
 
     public function edit($id)
     {
         $crops = Crop::findOrFail($id);
-        return view('crops.edit', compact('crop'));
+        return view('crops.edit', compact('crops'));
     }
 
     public function update(Request $request, $id)

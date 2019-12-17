@@ -10,7 +10,7 @@ class CreateCultivoTable extends Migration
     public function up()
     {
         Schema::create('cultivo', function (Blueprint $table) {
-            $table->Increments('idcultivo');
+            $table->Increments('id');
             $table->String('name_scientific',50);
             $table->String('name');
             $table->String('description',100);
