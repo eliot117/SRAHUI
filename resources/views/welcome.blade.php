@@ -11,6 +11,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="css/mystyle.css" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -19,9 +20,7 @@
 
     @extends('layouts.navbarInicio')
     @section('content')
-    
-    
-     
+     <img srcset="img/fondo.png 1295w">
     
     
     

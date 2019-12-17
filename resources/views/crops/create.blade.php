@@ -7,23 +7,48 @@
       <div class="box-header with-border">
         <h3 class="box-title">Insertar un Cultivo</h3>
       </div>
-      <form role="form">
+      <form role="form" method="POST" action="{{ route('crops.store') }} ">
+        @csrf
         <div class="box-body">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            <label for="scientific">Nombre Cientifico</label>
+            <input type="text" name="name_scientific" class="form-control" placeholder="Ingrese nombre cientifico" value="{{ old('name_scientific') }}">
+            @error('name_scientific')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+            @enderror
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" class="form-control" placeholder="Ingrese un nombre" value="{{ old('name') }}">
+            @error('name')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+            @enderror
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="description">Descripción</label>
+            <textarea type="textarea" name="description" class="form-control" placeholder="Ingrese una descripción">{{old('description')}}</textarea>
+            @error('description')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+            @enderror
+          </div>
+          <div class="form-group">
+            <label for="file">Nombre</label>
+            <input type="file" name="imagen" class="form-control" placeholder="Ingrese una imagen" value="{{ old('imagen') }}">
+            @error('imagen')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+            @enderror
           </div>
         </div>
         <div class="box-footer">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" value="Enviar">Guardar</button>
         </div>
       </form>
     </div>
