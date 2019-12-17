@@ -9,6 +9,7 @@
       </div>
       <form role="form" method="POST" action="{{ route('crops.store') }} ">
         @csrf
+        {!! method_field('PUT') !!}
         <div class="box-body">
           <div class="form-group">
             <label for="scientific">Nombre Cientifico</label>

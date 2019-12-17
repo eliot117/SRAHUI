@@ -34,8 +34,15 @@
                     <td>{{ $crop->name }}</td>
                     <td>{{ $crop->description }}</td>
                     <td>{{ $crop->imagen }}</td>
-                    <td><button class="btn btn-primary"><a href="{{ route('crops.edit', $crop->id) }}">Editar</a></button></td>
-                    <td><button class="btn btn-danger">Eliminar</button></td>
+                    <td><a class="btn btn-primary" href="{{ route('crops.edit', $crop->id) }}">Editar</a></td>
+                    <td>
+                      <form method="POST" action="{{ route('crops.destroy', $crop->id)}}">
+                        @csrf
+                        {!! method_field('PUT') !!}
+                        {!! method_field('DELETE') !!}
+                        <button class="btn btn-danger" type="submit">Eliminar</button>
+                      </form>
+                    </td>
                  </tr>
                 @endforeach
               </tbody>
