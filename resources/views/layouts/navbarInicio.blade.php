@@ -11,11 +11,11 @@
             <ul class="navbar-nav ml-auto">
             <!-- Authentication Links -->
                 <li class="nav-item">
-                     <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
+                     <a class="btn btn-success" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                 </li>
                 @if (Route::has('register'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarme') }}</a>
+                        <a class="btn btn-success" href="{{ route('register') }}">{{ __('Registrarme') }}</a>
                     </li>
                 @endif
             </ul>
