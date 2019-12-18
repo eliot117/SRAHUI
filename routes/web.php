@@ -6,4 +6,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('crops', 'CropsController');
+Route::group(['middleware' => ['permiso:crear-cultivo']], function () {
+    Route::resource('crops', 'CropsController');
+});
