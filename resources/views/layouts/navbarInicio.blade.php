@@ -1,6 +1,6 @@
 <div id="app">
     <!--<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">-->
-    <nav class="navbar navbar-expand-md navbar-light" style="background-color: #4285F4; shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color: #00C851; shadow-sm">
         <a class="navbar-brand" href="{{ url('/') }}">Sistema de Riego Automatizado</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -11,11 +11,11 @@
             <ul class="navbar-nav ml-auto">
             <!-- Authentication Links -->
                 <li class="nav-item">
-                     <a class="btn btn-success" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
+                     <a class="btn btn-primary" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                 </li>
                 @if (Route::has('register'))
                     <li class="nav-item">
-                        <a class="btn btn-success" href="{{ route('register') }}">{{ __('Registrarme') }}</a>
+                        <a class="btn btn-primary" href="{{ route('register') }}">{{ __('Registrarme') }}</a>
                     </li>
                 @endif
             </ul>
