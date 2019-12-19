@@ -54,6 +54,7 @@
           <ul class="treeview-menu">
           <li><a href="#"><i class="fa fa-circle-o"></i>Sensor de Humedad</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i>Sensor de Lluvia</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Senssor de Tierra</a></li>
           </ul>
         </li>
       </ul>
