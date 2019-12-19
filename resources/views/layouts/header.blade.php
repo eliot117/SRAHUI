@@ -63,7 +63,7 @@
                 <img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
 
                 <p>
-                  {{ Auth::user()->name }} - Administrador
+                  {{ Auth::user()->name }}
                   <small>Miembro desde Oct. 2019</small>
                 </p>
               </li>

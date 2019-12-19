@@ -38,10 +38,6 @@
                   </span>
                 @enderror
             </div>
-            <div class="form-group">
-                <label for="password">Confirme Contraseña</label>
-                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirme Contraseña" value="{{ $users->password }}">
-            </div>
           </div>
           <div class="box-footer">
             <button type="submit" class="btn btn-primary" value="Enviar">Guardar</button>
