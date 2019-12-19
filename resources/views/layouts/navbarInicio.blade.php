@@ -1,15 +1,19 @@
 <div id="app">
     <!--<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">-->
-    <nav class="navbar navbar-expand-md navbar-light" style="background-color: #795548; shadow-sm">
-        <a class="navbar-brand" href="{{ url('/') }}" style="color: #4285F4;">Sistema de Riego Automatizado</a>
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color: #00c853; shadow-sm">
+        <a class="navbar-brand" href="{{ url('/') }}" style="color: #000000;">Sistema de Riego Automatizado</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Right Side Of Navbar -->
+          @if(Route::has('login'))
             <ul class="navbar-nav ml-auto">
-            <!-- Authentication Links -->
+                @auth
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="{{ url('/home') }}">Home</a>
+                    </li>
+                @else
                 <li class="nav-item">
                      <a class="btn btn-primary" style="magin: 10px" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                 </li>
@@ -18,7 +22,9 @@
                         <a class="btn btn-primary" style="margin-left: 10px " href="{{ route('register') }}">{{ __('Registrarme') }}</a>
                     </li>
                 @endif
+                @endauth
             </ul>
+          @endif
         </div>
     </nav>
 
