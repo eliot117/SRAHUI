@@ -22,8 +22,8 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ route('users.index') }}"><i class="fa fa-circle-o"></i>Lista de Usuarios</a></li>
             <li><a href="{{ route('users.create') }}"><i class="fa fa-circle-o"></i>Crear Usuarios</a></li>
+            <li><a href="{{ route('users.index') }}"><i class="fa fa-circle-o"></i>Lista de Usuarios</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -44,6 +44,16 @@
           <ul class="treeview-menu">
           <li><a href="{{ route('crops.create') }}"><i class="fa fa-circle-o"></i> Inserte cultivo</a></li>
           <li><a href="{{ route('crops.index') }}"><i class="fa fa-circle-o"></i>Lista de Cultivos</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>Riego Datos</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i>Sensor de Humedad</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Sensor de Lluvia</a></li>
           </ul>
         </li>
       </ul>
