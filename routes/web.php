@@ -23,3 +23,5 @@ Route::group(['middleware' => ['permiso:ver-cultivo']], function () {
 });
 
 Route::resource('users', 'UserController');
+
+Route::resource('roles', 'RoleController');

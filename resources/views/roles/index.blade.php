@@ -5,16 +5,17 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header">
-          <h3 class="box-title">Lista de Usuarios</h3>
+          <h3 class="box-title">Lista de Roles</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
+          <a class="btn btn-success" href="{{ route('roles.create') }}" style="">Crear Rol</a><br><br>
           <table id="example2" class="table table-bordered table-hover">
             <thead>
             <tr>
               <th>Id</th>
               <th>Nombre</th>
-              <th>Correo</th>
+              <th>Guard Name</th>
               <th>Creado</th>
               <th>Actualizado</th>
               <th>Editar</th>
@@ -22,19 +23,19 @@
             </tr>
             </thead>
             <tbody>
-              @foreach ($users as $user)
+              @foreach ($roles as $role)
                <tr>
-                  <td>{{ $user->id }}</td>
+                  <td>{{ $role->id }}</td>
                   <td>
-                   <a href="{{ route('users.show', $user->id) }}">
-                      {{ $user->name }}</a>
+                   <a href="{{ route('roles.show', $role->id) }}">
+                      {{ $role->name }}</a>
                   </td>
-                  <td>{{ $user->email }}</td>
-                  <td>{{ $user->created_at }}</td>
-                  <td>{{ $user->updated_at }}</td>
-                  <td><a class="btn btn-primary" href="{{ route('users.edit', $user->id) }}">Editar</a></td>
+                  <td>{{ $role->guard_name }}</td>
+                  <td>{{ $role->created_at }}</td>
+                  <td>{{ $role->updated_at }}</td>
+                  <td><a class="btn btn-primary" href="{{ route('roles.edit', $role->id) }}">Editar</a></td>
                   <td>
-                    <form method="POST" action="{{ route('users.destroy', $user->id)}}">
+                    <form method="POST" action="{{ route('roles.destroy', $role->id)}}">
                       @csrf
                       {!! method_field('PUT') !!}
                       {!! method_field('DELETE') !!}

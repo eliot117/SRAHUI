@@ -22,28 +22,38 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ route('users.create') }}"><i class="fa fa-circle-o"></i>Crear Usuarios</a></li>
-            <li><a href="{{ route('users.index') }}"><i class="fa fa-circle-o"></i>Lista de Usuarios</a></li>
+            <li><a href="{{ route('users.create') }}"><i class="glyphicon glyphicon-edit"></i>Crear Usuarios</a></li>
+            <li><a href="{{ route('users.index') }}"><i class="fa fa-list-alt"></i>Lista de Usuarios</a></li>
           </ul>
         </li>
+        <li class="treeview">
+          <a href="{{ route('roles.index') }}">
+            <i class="fa fa-lock"></i> <span>Roles</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('roles.index') }}"><i class="fa fa-lock"></i>Roles</a></li>
+            <li><a href=""><i class="fa fa-unlock-alt"></i>Permisos</a></li>
+          </ul>
+        </li><!--
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i> <span>Roles</span>
+            <i class="fa fa-edit"></i> <span>Permisos</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Roles</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Permisos</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Lista de Permisos</a></li>
           </ul>
-        </li>
+        </li>-->
         <li class="treeview">
           <a href="{{ route('crops.index') }}">
-            <i class="fa fa-edit"></i> <span>Cultivos</span>
+            <i class="fa fa-archive"></i> <span>Cultivos</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-          <li><a href="{{ route('crops.create') }}"><i class="fa fa-circle-o"></i> Inserte cultivo</a></li>
-          <li><a href="{{ route('crops.index') }}"><i class="fa fa-circle-o"></i>Lista de Cultivos</a></li>
+          <li><a href="{{ route('crops.create') }}"><i class="glyphicon glyphicon-edit"></i> Inserte cultivo</a></li>
+          <li><a href="{{ route('crops.index') }}"><i class="fa fa-list-alt"></i>Lista de Cultivos</a></li>
           </ul>
         </li>
         <li class="treeview">
