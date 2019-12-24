@@ -54,14 +54,14 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
+              <!--<img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">-->
+              <img src="{{ asset('profile/'.Auth::User()->image_profile)}}" class="user-image" alt="">
               <span class="hidden-xs">{{ Auth::user()->name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
-
+                <img src="{{ asset('profile/'.Auth::User()->image_profile)}}" class="img-circle" alt="">
                 <p>
                   {{ Auth::user()->name }}
                   <small>Miembro desde Oct. 2019</small>

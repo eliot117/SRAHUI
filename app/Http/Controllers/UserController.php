@@ -21,11 +21,19 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        User::create([
-            "name"     => $request->input('name'),
-            "email"    => $request->input('email'),
-            "password" => Hash::make($request['password'])
-        ]);
+        if($request->hasFile('image_profile')){
+            $file = $request->file('image_profile');
+            $name = time().$file->getClientOriginalName();
+            $file->move(public_path().'/profile/',$name);
+        }
+
+        $users = new User();
+        $users->name          = $request->input('name');
+        $users->email         = $request->input('email');
+        $users->password      = Hash::make($request->input('password'));
+        $users->image_profile = $name;
+        $users->save();
+
         return redirect()->route('users.index');
     }
 

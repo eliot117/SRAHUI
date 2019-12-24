@@ -7,7 +7,7 @@
         <div class="box-header with-border">
           <h3 class="box-title">Crear Nuevo Usuario</h3>
         </div>
-        <form role="form" method="POST" action="{{ route('users.update', $users->id) }} ">
+        <form role="form" method="POST" action="{{ route('users.update', $users->id) }}">
           @csrf
           {!! method_field('PUT') !!}
           <div class="box-body">
