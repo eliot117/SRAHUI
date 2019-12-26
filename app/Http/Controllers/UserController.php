@@ -21,17 +21,10 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        if($request->hasFile('image_profile')){
-            $file = $request->file('image_profile');
-            $name = time().$file->getClientOriginalName();
-            $file->move(public_path().'/profile/',$name);
-        }
-
         $users = new User();
         $users->name          = $request->input('name');
         $users->email         = $request->input('email');
         $users->password      = Hash::make($request->input('password'));
-        $users->image_profile = $name;
         $users->save();
 
         return redirect()->route('users.index');
@@ -52,10 +45,11 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $users = User::findOrFail($id);
+
         $users->update([
             "name"      => $request->input('name'),
             "email"     => $request->input('email'),
-            "password"  => Hash::make($request['password'])
+            "password"  => Hash::make($request['password']),
         ]);
         
         return redirect()->route('users.index');

@@ -57,7 +57,6 @@
         <div class="col-xs-12">
           <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
         </div>
-        <!-- /.col -->
       </div>
     </form>
 

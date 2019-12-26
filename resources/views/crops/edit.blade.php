@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@can('editar-cultivo', Crop::class)
 <div class="row">
   <div class="col-md-12">
     <div class="box box-primary">
@@ -56,5 +55,4 @@
     </div>
   </div>
 </div>
-@endcan
 @endsection

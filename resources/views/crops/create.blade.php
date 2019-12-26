@@ -1,14 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-@can('crear-cultivo', Crop::class)
 <div class="row">
   <div class="col-md-12">
     <div class="box box-primary">
       <div class="box-header with-border">
         <h3 class="box-title">Insertar un Cultivo</h3>
       </div>
-      <form role="form" method="POST" action="{{ route('crops.store') }} ">
+      <form role="form" method="POST" action="{{ route('crops.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="box-body">
           <div class="form-group">
@@ -55,5 +54,4 @@
     </div>
   </div>
 </div>
-@endcan
 @endsection
