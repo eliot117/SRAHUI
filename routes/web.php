@@ -1,12 +1,13 @@
 <?php
 
-Route::get('/', function () { return view('welcome'); });
-
 Auth::routes();
+
+Route::get('/', function () { return view('welcome'); });
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::resource('crops', 'CropsController');
+Route::resource('crop', 'CropController');
+
 Route::resource('users', 'UserController');
 
 Route::resource('roles', 'RoleController');

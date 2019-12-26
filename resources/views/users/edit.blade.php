@@ -7,7 +7,7 @@
         <div class="box-header with-border">
           <h3 class="box-title">Crear Nuevo Usuario</h3>
         </div>
-        <form role="form" method="POST" action="{{ route('users.update', $users->id) }}" enctype="multipart/form-data">
+        <form role="form" method="POST" action="{{ route('users.update', $users->id) }}">
           @csrf
           {!! method_field('PUT') !!}
           <div class="box-body">
@@ -37,15 +37,6 @@
                     <strong>{{ $message }}</strong>
                   </span>
                 @enderror
-            </div>
-            <div class="form-group">
-              <label for="image_profile">Imagen Perfil</label>
-              <input type="file" name="image_profile">
-              @error('image_profile')
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-              @enderror
             </div>
           </div>
           <div class="box-footer">

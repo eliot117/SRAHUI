@@ -9,7 +9,7 @@
       <p>Nombre:            {{ $crops->name }}</p>
       <p>Nombre Cientifico: {{ $crops->name_scientific }}</p>
       <p>Descripcion:       {{ $crops->description }}</p>
-      <p>imagen: {{ $crops->imagen}}</p> 
+      <p>imagen: {{ $crops->image_crop}}</p> 
     </div>
     <!-- /.box-body -->
 </div>

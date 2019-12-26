@@ -48,13 +48,13 @@
           </ul>
         </li>-->
         <li class="treeview">
-          <a href="">
+          <a href="{{ route('crop.index') }}">
             <i class="fa fa-archive"></i> <span>Cultivos</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-          <li><a href=""><i class="glyphicon glyphicon-edit"></i> Inserte cultivo</a></li>
-          <li><a href=""><i class="fa fa-list-alt"></i>Lista de Cultivos</a></li>
+          <li><a href="{{ route('crop.create') }}"><i class="glyphicon glyphicon-edit"></i> Inserte cultivo</a></li>
+          <li><a href="{{ route('crop.index') }}"><i class="fa fa-list-alt"></i>Lista de Cultivos</a></li>
           </ul>
         </li>
         <li class="treeview">
