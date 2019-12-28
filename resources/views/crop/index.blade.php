@@ -22,19 +22,19 @@
             </tr>
             </thead>
             <tbody>
-              @foreach ($crops as $crop)
+              @foreach ($crop as $cro)
                <tr>
-                  <td>{{ $crop->id }}</td>
+                  <td>{{ $cro->id }}</td>
                   <td>
-                   <a href="{{ route('crop.show', $crop->id) }}">
-                      {{ $crop->name_scientific }}</a>
+                   <a href="{{ route('crop.show', $cro->id) }}">
+                      {{ $cro->name_scientific }}</a>
                   </td>
-                  <td>{{ $crop->name }}</td>
-                  <td>{{ $crop->description }}</td>
-                  <td>{{ $crop->updated_at }}</td>
-                  <td><a class="btn btn-primary" href="{{ route('crop.edit', $crop->id) }}">Editar</a></td>
+                  <td>{{ $cro->name }}</td>
+                  <td>{{ $cro->description }}</td>
+                  <td>{{ $cro->updated_at }}</td>
+                  <td><a class="btn btn-primary" href="{{ route('crop.edit', $cro->id) }}">Editar</a></td>
                   <td>
-                    <form method="POST" action="{{ route('crop.destroy', $crop->id)}}">
+                    <form method="POST" action="{{ route('crop.destroy', $cro->id)}}">
                       @csrf
                       {!! method_field('PUT') !!}
                       {!! method_field('DELETE') !!}

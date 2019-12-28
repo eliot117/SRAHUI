@@ -9,7 +9,7 @@ class CropController extends Controller
 {
     public function index()
     {
-        $crops = Crop::all();
+        $crop = Crop::all();
         return view('crop.index', compact('crop'));
     }
 
@@ -39,19 +39,19 @@ class CropController extends Controller
 
     public function show($id)
     {
-        $crops = Crop::findOrFail($id);
+        $crop = Crop::findOrFail($id);
         return view('crop.show', compact('crop'));
     }
 
     public function edit($id)
     {
-        $crops = Crop::findOrFail($id);        
+        $crop = Crop::findOrFail($id);        
         return view('crop.edit', compact('crop'));
     }
 
     public function update(Request $request, $id)
     {
-        $users = Crop::findOrFail($id);
+        $crop = Crop::findOrFail($id);
         
         if($request->hasFile('image_crop')){
             $file = $request->file('image_crop');
@@ -60,7 +60,7 @@ class CropController extends Controller
             $file->move(public_path('image/crop'), $name);
         }
 
-        $users->update([
+        $crop->update([
             "name_scientific" => $request->input('name_scientific'),
             "name"            => $request->input('name'),
             "description"     => $request->input('description'),
