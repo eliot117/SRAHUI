@@ -9,7 +9,7 @@ class CreateCropsTable extends Migration
     public function up()
     {
         Schema::create('crops', function (Blueprint $table) {
-            $table->increments('idcultivo');
+            $table->increments('id');
             $table->String('name_scientific',50)->unique();
             $table->String('name',20);
             $table->String('description',100);

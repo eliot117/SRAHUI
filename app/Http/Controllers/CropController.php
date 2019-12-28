@@ -23,7 +23,8 @@ class CropController extends Controller
         if($request->hasFile('image_crop')){
             $file = $request->file('image_crop');
             $name = time().$file->getClientOriginalName();
-            $file->move(public_path().'/crop/',$name);
+            //$file->move(public_path().'/storage/',$name);
+            $file->move(public_path('image/crop'), $name);
         }
 
         $crops = new Crop();
@@ -36,26 +37,27 @@ class CropController extends Controller
         return redirect()->route('crop.index');
     }
 
-    public function show($idcultivo)
+    public function show($id)
     {
-        $crops = Crop::findOrFail($idcultivo);
+        $crops = Crop::findOrFail($id);
         return view('crop.show', compact('crop'));
     }
 
-    public function edit($idcultivo)
+    public function edit($id)
     {
-        $crops = Crop::findOrFail($idcultivo);        
+        $crops = Crop::findOrFail($id);        
         return view('crop.edit', compact('crop'));
     }
 
-    public function update(Request $request, $idcultivo)
+    public function update(Request $request, $id)
     {
-        $users = User::findOrFail($idcultivo);
+        $users = Crop::findOrFail($id);
         
         if($request->hasFile('image_crop')){
             $file = $request->file('image_crop');
             $name = time().$file->getClientOriginalName();
-            $file->move(public_path().'/crop/',$name);
+            //$file->move(public_path().'/storage/',$name);
+            $file->move(public_path('image/crop'), $name);
         }
 
         $users->update([
@@ -68,9 +70,9 @@ class CropController extends Controller
         return redirect()->route('crop.index');
     }
 
-    public function destroy($idcultivo)
+    public function destroy($id)
     {
-        Crop::findOrFail($idcultivo)->delete();
+        Crop::findOrFail($id)->delete();
         return redirect()->route('crop.index');
     }
 }

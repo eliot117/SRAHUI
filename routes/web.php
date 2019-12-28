@@ -10,4 +10,6 @@ Route::resource('crop', 'CropController');
 
 Route::resource('users', 'UserController');
 
+Route::resource('datausers', 'DataUsersController');
+
 Route::resource('roles', 'RoleController');

@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+<section class="content">
 <div class="row">
   <div class="col-md-12">
     <div class="box box-primary">
       <div class="box-header with-border">
         <h3 class="box-title">Insertar un Cultivo</h3>
       </div>
-      <form role="form" method="POST" action="{{ route('crop.update',$crops->idcultivo) }} ">
+      <form role="form" method="POST" action="{{ route('crop.update',$crops->id) }}" enctype="multipart/form-data">
         @csrf
         {!! method_field('PUT') !!}
         <div class="box-body">
@@ -55,4 +56,5 @@
     </div>
   </div>
 </div>
+</section>
 @endsection

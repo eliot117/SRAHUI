@@ -9,7 +9,7 @@ class CreateDataUsersTable extends Migration
     public function up()
     {
         Schema::create('data_users', function (Blueprint $table) {
-            $table->bigIncrements('idusers');
+            $table->Increments('id');
             $table->string('name',80);
             $table->string('lastname',80);
             $table->string('address',80);
