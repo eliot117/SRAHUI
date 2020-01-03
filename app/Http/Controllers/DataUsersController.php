@@ -23,7 +23,8 @@ class DataUsersController extends Controller
         if($request->hasFile('image_profile')){
             $file = $request->file('image_profile');
             $name = time().$file->getClientOriginalName();
-            $file->move(public_path().'/profile/',$name);
+            //$file->move(public_path().'/profile/',$name);
+            $file->move(public_path('profile/'), $name);
         }
         
         $data = new Datausers();
@@ -55,7 +56,8 @@ class DataUsersController extends Controller
         if($request->hasFile('image_profile')){
             $file = $request->file('image_profile');
             $name = time().$file->getClientOriginalName();
-            $file->move(public_path().'/profile/',$name);
+            //$file->move(public_path().'/profile/',$name);
+            $file->move(public_path('profile/'), $name);
         }
         
         $data->update([

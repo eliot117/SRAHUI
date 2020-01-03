@@ -13,3 +13,5 @@ Route::resource('users', 'UserController');
 Route::resource('datausers', 'DataUsersController');
 
 Route::resource('roles', 'RoleController');
+
+Route::resource('permissions', 'PermissionController');

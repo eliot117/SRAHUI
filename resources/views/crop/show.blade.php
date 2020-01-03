@@ -10,7 +10,7 @@
       <p>Nombre:            {{ $crop->name }}</p>
       <p>Nombre Cientifico: {{ $crop->name_scientific }}</p>
       <p>Descripcion:       {{ $crop->description }}</p>
-      <p>imagen: {{ $crop->image_crop}}</p> 
+      <p><img src="{{ asset('image/crop/'.$crop->image_crop)}}" class="img-fluid" alt=""></p> 
     </div>
     <!-- /.box-body -->
 </div>

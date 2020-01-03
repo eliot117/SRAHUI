@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class CropController extends Controller
 {
+
     public function index()
     {
         $crop = Crop::all();
