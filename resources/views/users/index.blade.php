@@ -2,6 +2,7 @@
 
 @section('content')
 <section class="content">
+@can('user_show')
 <div class="row">
     <div class="col-xs-12">
       <div class="box">
@@ -19,7 +20,9 @@
               <th>Creado</th>
               <th>Actualizado</th>
               <th>Editar</th>
+              @can('user_delete')
               <th>Eliminar</th>
+              @endcan
             </tr>
             </thead>
             <tbody>
@@ -33,7 +36,10 @@
                   <td>{{ $user->email }}</td>
                   <td>{{ $user->created_at }}</td>
                   <td>{{ $user->updated_at }}</td>
+                  @can('user_edit', Permission::class)
                   <td><a class="btn btn-primary" href="{{ route('users.edit', $user->id) }}">Editar</a></td>
+                  @endcan
+                  @can('user_delete', Permission::class)
                   <td>
                     <form method="POST" action="{{ route('users.destroy', $user->id)}}">
                       @csrf
@@ -42,6 +48,7 @@
                       <button class="btn btn-danger" type="submit">Eliminar</button>
                     </form>
                   </td>
+                  @endcan
                </tr>
               @endforeach
             </tbody>
@@ -51,4 +58,5 @@
   </div>
 </div>
 </section>
+@endcan
 @endsection

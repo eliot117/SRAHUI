@@ -27,6 +27,7 @@
             <li><a href="{{ route('users.index') }}"><i class="fa fa-list-alt"></i>Lista de Usuarios</a></li>
           </ul>
         </li>
+        @role('administrator')
         <li class="treeview">
           <a href="{{ route('roles.index') }}">
             <i class="fa fa-lock"></i> <span>Roles</span>
@@ -36,17 +37,8 @@
             <li><a href="{{ route('roles.index') }}"><i class="fa fa-lock"></i>Roles</a></li>
             <li><a href=""><i class="fa fa-unlock-alt"></i>Permisos</a></li>
           </ul>
-        </li><!--
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>Permisos</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Permisos</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Lista de Permisos</a></li>
-          </ul>
-        </li>-->
+        </li>
+        @endrole
         <li class="treeview">
           <a href="{{ route('crop.index') }}">
             <i class="fa fa-archive"></i> <span>Cultivos</span>

@@ -27,6 +27,8 @@ class UserController extends Controller
         $users->password      = Hash::make($request->input('password'));
         $users->save();
 
+        $users->assignRole('student');
+
         return redirect()->route('users.index');
     }
 

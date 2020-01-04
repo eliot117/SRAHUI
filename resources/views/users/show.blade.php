@@ -2,6 +2,7 @@
 
 @section('content')
 <section class="content">
+@can('user_show')
   <div class="box">
       <div class="box-header with-border">
         <h3 class="box-title">Informarción Usuario</h3>
@@ -12,5 +13,6 @@
       </div>
       <!-- /.box-body -->
 </div>
+@endcan
 </section>
 @endsection
