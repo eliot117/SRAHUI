@@ -27,22 +27,22 @@
             </tr>
             </thead>
             <tbody>
-              @foreach ($crop as $cro)
+              @foreach ($crops as $crop)
                <tr>
-                  <td>{{ $cro->id }}</td>
+                  <td>{{ $crop->id }}</td>
                   <td>
-                   <a href="{{ route('crop.show', $cro->id) }}">
-                      {{ $cro->name_scientific }}</a>
+                   <a href="{{ route('crops.show', $crop->id) }}">
+                      {{ $crop->name_scientific }}</a>
                   </td>
-                  <td>{{ $cro->name }}</td>
-                  <td>{{ $cro->description }}</td>
-                  <td>{{ $cro->updated_at }}</td>
+                  <td>{{ $crop->name }}</td>
+                  <td>{{ $crop->description }}</td>
+                  <td>{{ $crop->updated_at }}</td>
                   @can('crop_edit')
-                  <td><a class="btn btn-primary" href="{{ route('crop.edit', $cro->id) }}">Editar</a></td>
+                  <td><a class="btn btn-primary" href="{{ route('crops.edit', $crop->id) }}">Editar</a></td>
                   @endcan
                   @can('crop_delete')
                   <td>
-                    <form method="POST" action="{{ route('crop.destroy', $cro->id)}}">
+                    <form method="POST" action="{{ route('crops.destroy', $crop->id)}}">
                       @csrf
                       {!! method_field('PUT') !!}
                       {!! method_field('DELETE') !!}

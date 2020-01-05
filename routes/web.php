@@ -7,7 +7,7 @@ Route::get('/', function () { return view('welcome'); });
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['permiso:crop_show']], function () {
-    Route::resource('crop', 'CropController');
+    Route::resource('crops', 'CropController');
 });
 
 Route::group(['middleware' => ['permiso:user_show']], function () {

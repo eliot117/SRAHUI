@@ -10,13 +10,13 @@ class CropController extends Controller
 
     public function index()
     {
-        $crop = Crop::all();
-        return view('crop.index', compact('crop'));
+        $crops = Crop::all();
+        return view('crops.index', compact('crops'));
     }
 
     public function create()
     {
-        return view('crop.create');
+        return view('crops.create');
     }
 
     public function store(Request $request)
@@ -35,19 +35,19 @@ class CropController extends Controller
         $crops->image_crop = $name;
         $crops->save();
 
-        return redirect()->route('crop.index');
+        return redirect()->route('crops.index');
     }
 
     public function show($id)
     {
         $crop = Crop::findOrFail($id);
-        return view('crop.show', compact('crop'));
+        return view('crops.show', compact('crops'));
     }
 
     public function edit($id)
     {
         $crop = Crop::findOrFail($id);        
-        return view('crop.edit', compact('crop'));
+        return view('crops.edit', compact('crops'));
     }
 
     public function update(Request $request, $id)
@@ -68,12 +68,12 @@ class CropController extends Controller
             "image_crop"      => $name,
         ]);
         
-        return redirect()->route('crop.index');
+        return redirect()->route('crops.index');
     }
 
     public function destroy($id)
     {
         Crop::findOrFail($id)->delete();
-        return redirect()->route('crop.index');
+        return redirect()->route('crops.index');
     }
 }

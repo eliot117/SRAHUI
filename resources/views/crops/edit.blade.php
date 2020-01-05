@@ -9,7 +9,7 @@
       <div class="box-header with-border">
         <h3 class="box-title">Insertar un Cultivo</h3>
       </div>
-      <form role="form" method="POST" action="{{ route('crop.update',$crop->id) }}" enctype="multipart/form-data">
+      <form role="form" method="POST" action="{{ route('crops.update',$crop->id) }}" enctype="multipart/form-data">
         @csrf
         {!! method_field('PUT') !!}
         <div class="box-body">
