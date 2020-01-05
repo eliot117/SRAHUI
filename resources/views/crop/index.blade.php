@@ -2,6 +2,7 @@
 
 @section('content')
 <section class="content">
+@can('crop_show')
 <div class="row">
     <div class="col-xs-12">
       <div class="box">
@@ -17,8 +18,12 @@
               <th>Nombre</th>
               <th>Descripción</th>
               <th>Actualizado</th>
-              <th>Editar</th>
-              <th>Eliminar</th>
+              @can('crop_edit')
+              <th>Editar</th>  
+              @endcan
+              @can('crop_delete')
+              <th>Eliminar</th>  
+              @endcan
             </tr>
             </thead>
             <tbody>
@@ -32,7 +37,10 @@
                   <td>{{ $cro->name }}</td>
                   <td>{{ $cro->description }}</td>
                   <td>{{ $cro->updated_at }}</td>
+                  @can('crop_edit')
                   <td><a class="btn btn-primary" href="{{ route('crop.edit', $cro->id) }}">Editar</a></td>
+                  @endcan
+                  @can('crop_delete')
                   <td>
                     <form method="POST" action="{{ route('crop.destroy', $cro->id)}}">
                       @csrf
@@ -41,6 +49,7 @@
                       <button class="btn btn-danger" type="submit">Eliminar</button>
                     </form>
                   </td>
+                  @endcan
                </tr>
               @endforeach
             </tbody>
@@ -49,5 +58,6 @@
       </div>
   </div>
 </div>
+@endcan
 </section>
 @endsection

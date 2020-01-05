@@ -2,6 +2,7 @@
 
 @section('content')
 <section class="content">
+@can('crop_create')
 <div class="row">
     <div class="col-md-12">
       <div class="box box-primary">
@@ -55,5 +56,6 @@
       </div>
     </div>
   </div>
-</section>    
+</section>
+@endcan
 @endsection

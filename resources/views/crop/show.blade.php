@@ -2,6 +2,7 @@
 
 @section('content')
 <section class="content">
+@can('crop_show')
 <div class="box">
     <div class="box-header with-border">
       <h3 class="box-title">Cultivo</h3>
@@ -12,7 +13,7 @@
       <p>Descripcion:       {{ $crop->description }}</p>
       <p><img src="{{ asset('image/crop/'.$crop->image_crop)}}" class="img-fluid" alt=""></p> 
     </div>
-    <!-- /.box-body -->
 </div>
+@endcan
 </section>
 @endsection
