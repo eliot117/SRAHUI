@@ -37,7 +37,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ route('roles.index') }}"><i class="fa fa-lock"></i>Roles</a></li>
-            <li><a href=""><i class="fa fa-unlock-alt"></i>Permisos</a></li>
+            <li><a href="{{ route('permissions.index') }}"><i class="fa fa-unlock-alt"></i>Permisos</a></li>
           </ul>
         </li>
         @endrole

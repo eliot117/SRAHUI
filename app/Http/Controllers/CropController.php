@@ -40,19 +40,19 @@ class CropController extends Controller
 
     public function show($id)
     {
-        $crop = Crop::findOrFail($id);
+        $crops = Crop::findOrFail($id);
         return view('crops.show', compact('crops'));
     }
 
     public function edit($id)
     {
-        $crop = Crop::findOrFail($id);        
+        $crops = Crop::findOrFail($id);        
         return view('crops.edit', compact('crops'));
     }
 
     public function update(Request $request, $id)
     {
-        $crop = Crop::findOrFail($id);
+        $crops = Crop::findOrFail($id);
         
         if($request->hasFile('image_crop')){
             $file = $request->file('image_crop');
@@ -61,7 +61,7 @@ class CropController extends Controller
             $file->move(public_path('image/crop'), $name);
         }
 
-        $crop->update([
+        $crops->update([
             "name_scientific" => $request->input('name_scientific'),
             "name"            => $request->input('name'),
             "description"     => $request->input('description'),

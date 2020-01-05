@@ -8,10 +8,10 @@
       <h3 class="box-title">Cultivo</h3>
     </div>
     <div class="box-body">
-      <p>Nombre:            {{ $crop->name }}</p>
-      <p>Nombre Cientifico: {{ $crop->name_scientific }}</p>
-      <p>Descripcion:       {{ $crop->description }}</p>
-      <p><img src="{{ asset('image/crop/'.$crop->image_crop)}}" class="img-fluid" alt=""></p> 
+      <p>Nombre:            {{ $crops->name }}</p>
+      <p>Nombre Cientifico: {{ $crops->name_scientific }}</p>
+      <p>Descripcion:       {{ $crops->description }}</p>
+      <p><img src="{{ asset('image/crop/'.$crops->image_crop)}}" class="img-fluid" alt=""></p> 
     </div>
 </div>
 @endcan

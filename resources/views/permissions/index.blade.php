@@ -6,7 +6,7 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header">
-          <h3 class="box-title">Lista de Roles Disponibles</h3>
+          <h3 class="box-title">Lista de Permisos Disponibles</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -16,21 +16,17 @@
               <th>Id</th>
               <th>Nombre</th>
               <th>Guard Name</th>
-              <th>Creado</th>
-              <th>Actualizado</th>
             </tr>
             </thead>
             <tbody>
-              @foreach ($roles as $role)
+              @foreach ($permissions as $permiso)
                <tr>
-                  <td>{{ $role->id }}</td>
+                  <td>{{ $permiso->id }}</td>
                   <td>
-                   <a href="{{ route('roles.show', $role->id) }}">
-                      {{ $role->name }}</a>
+                   <a href="{{ route('permissions.show', $permiso->id) }}">
+                      {{ $permiso->name }}</a>
                   </td>
-                  <td>{{ $role->guard_name }}</td>
-                  <td>{{ $role->created_at }}</td>
-                  <td>{{ $role->updated_at }}</td>
+                  <td>{{ $permiso->guard_name }}</td>
                </tr>
               @endforeach
             </tbody>
