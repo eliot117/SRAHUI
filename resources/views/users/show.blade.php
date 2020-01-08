@@ -3,7 +3,7 @@
 @section('content')
 <section class="content">
 @can('user_show')
-  <div class="box">
+<div class="box">
       <div class="box-header with-border">
         <h3 class="box-title">Informarción Usuario</h3>
       </div>
@@ -11,7 +11,6 @@
         <p>Nombre:             {{ $users->name }}</p>
         <p>Correo Electronico: {{ $users->email }}</p>
       </div>
-      <!-- /.box-body -->
 </div>
 @endcan
 </section>
