@@ -14,7 +14,7 @@ Route::group(['middleware' => ['permiso:user_show']], function () {
     Route::resource('users', 'UserController');
 });
 
-Route::resource('datausers', 'DataUsersController');
+Route::resource('profiles', 'ProfileController');
 
 Route::resource('roles', 'RoleController');
 

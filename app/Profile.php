@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Datausers extends Model
+class Profile extends Model
 {
-    protected $table    = "data_users";
+    protected $table    = "profile";
     protected $fillable = [
         'name','lastname','address','image_profile'
     ];
+    
 }

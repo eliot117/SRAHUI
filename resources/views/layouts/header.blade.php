@@ -62,7 +62,7 @@
               <!-- User image -->
               <li class="user-header">
                 <img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
-                <!--<img src="{{ asset('profile/'.Auth::User()->image_profile)}}" class="img-circle" alt="">-->
+              <!--<img src="{{ asset('profile/'.Auth::User()->image_profile)}}" class="img-circle" alt="">-->
                 <p>
                   {{ Auth::user()->name }}
                   <small>Miembro desde Oct. 2019</small>
@@ -72,7 +72,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="{{ route('datausers.index') }}" class="btn btn-success btn-flat">Perfil</a>
+                  <a href="{{ route('profiles.index') }}" class="btn btn-success btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
                   <a href="{{ route('logout') }}" class="btn btn-danger btn-flat"
