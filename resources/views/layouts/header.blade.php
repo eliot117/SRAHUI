@@ -16,7 +16,7 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Notifications: style can be found in dropdown.less -->
-          <li class="dropdown notifications-menu">
+          <!--<li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
               <span class="label label-warning">5</span>
@@ -24,7 +24,7 @@
             <ul class="dropdown-menu">
               <li class="header">Tu tienes 5 notificaciones</li>
               <li>
-                <!-- inner menu: contains the actual data -->
+                 inner menu: contains the actual data --><!--
                 <ul class="menu">
                   <li>
                     <a href="#">
@@ -50,29 +50,30 @@
               </li>
               <li class="footer"><a href="#">Ver todo</a></li>
             </ul>
-          </li>
+          </li>-->
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
-              <!--<img src="{{ asset('profile/'.Auth::User()->image_profile)}}" class="user-image" alt="">-->
+              <!--<img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">-->
+              <img src="{{ asset('avatar/'.Auth::user()->avatar)}}" class="user-image" alt="User Image">
               <span class="hidden-xs">{{ Auth::user()->name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
-              <!--<img src="{{ asset('profile/'.Auth::User()->image_profile)}}" class="img-circle" alt="">-->
+                <!--<img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">-->
+                <img src="{{ asset('avatar/'.Auth::user()->avatar)}}" class="img-circle" alt="User Image">
                 <p>
-                  {{ Auth::user()->name }}
-                  <small>Miembro desde Oct. 2019</small>
+                  {{ Auth::user()->firstname }}
+                  {{ Auth::user()->lastname  }}
+                  <small>Miembro desde {{ Auth::user()->created_at }}</small>
                 </p>
               </li>
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="{{ route('profiles.index') }}" class="btn btn-success btn-flat">Perfil</a>
+                  <a href="" class="btn btn-success btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
                   <a href="{{ route('logout') }}" class="btn btn-danger btn-flat"
@@ -87,7 +88,6 @@
               </li>
             </ul>
           </li>
-         
         </ul>
       </div>
     </nav>

@@ -25,7 +25,7 @@ class CropController extends Controller
             $file = $request->file('image_crop');
             $name = time().$file->getClientOriginalName();
             //$file->move(public_path().'/storage/',$name);
-            $file->move(public_path('image/crop'), $name);
+            $file->move(public_path('crop/'), $name);
         }
 
         $crops = new Crop();
@@ -58,7 +58,7 @@ class CropController extends Controller
             $file = $request->file('image_crop');
             $name = time().$file->getClientOriginalName();
             //$file->move(public_path().'/storage/',$name);
-            $file->move(public_path('image/crop'), $name);
+            $file->move(public_path('crop/'), $name);
         }
 
         $crops->update([

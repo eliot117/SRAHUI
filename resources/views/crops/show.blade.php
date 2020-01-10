@@ -11,7 +11,7 @@
       <p>Nombre:            {{ $crops->name }}</p>
       <p>Nombre Cientifico: {{ $crops->name_scientific }}</p>
       <p>Descripcion:       {{ $crops->description }}</p>
-      <p><img src="{{ asset('image/crop/'.$crops->image_crop)}}" class="img-fluid" alt=""></p> 
+      <p><img src="{{ asset('crop/'.$crops->image_crop)}}" class="img-fluid" alt=""></p> 
     </div>
 </div>
 @endcan

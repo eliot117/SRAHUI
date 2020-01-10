@@ -9,7 +9,7 @@
         <div class="box-header with-border">
           <h3 class="box-title">Crear Nuevo Usuario</h3>
         </div>
-        <form role="form" method="POST" action="{{ route('users.update', $users->id) }}">
+        <form role="form" method="POST" action="{{ route('users.update', $users->id) }}" enctype="multipart/form-data">
           @csrf
           {!! method_field('PUT') !!}
           <div class="box-body">
@@ -39,6 +39,33 @@
                     <strong>{{ $message }}</strong>
                   </span>
                 @enderror
+            </div>
+            <div class="form-group">
+              <label id="firstname">Nombres</label>
+              <input type="firstname" name="firstname" class="form-control" placeholder="Ingrese Nombres" value="{{ $users->firstname }}">
+              @error('firstname')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+            <div class="form-group">
+              <label id="lastname">Apellidos</label>
+              <input type="lastname" name="lastname" class="form-control" placeholder="Ingrese Apellidos" value="{{ $users->lastname }}">
+              @error('lastname')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+            <div class="form-group">
+              <label id="avatar">Avatar</label>
+              <input type="file" name="avatar" class="form-control" placeholder="Ingrese Imagen" value="{{ $users->avatar }}">
+              @error('avatar')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+              @enderror
             </div>
           </div>
           <div class="box-footer">

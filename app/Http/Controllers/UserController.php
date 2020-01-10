@@ -47,11 +47,20 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $users = User::findOrFail($id);
+        
+        if($request->hasFile('avatar')){
+            $file = $request->file('avatar');
+            $name = time().$file->getClientOriginalName();
+            $file->move(public_path('avatar/'), $name);
+        }
 
         $users->update([
             "name"      => $request->input('name'),
             "email"     => $request->input('email'),
             "password"  => Hash::make($request['password']),
+            "firstname" => $request->input('firstname'),
+            "lastname"  => $request->input('lastname'),
+            "avatar"    => $name,
         ]);
         
         return redirect()->route('users.index');

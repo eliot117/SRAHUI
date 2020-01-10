@@ -13,7 +13,7 @@ class User extends Authenticatable
     use HasRoles;
 
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','firstname','lastname','avatar'
     ];
 
     protected $hidden = [
@@ -23,9 +23,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-/*
-    public function Datausers()
-    {
-        return $this->belongsTo(Datausers::class,'id');
-    }*/
 }
