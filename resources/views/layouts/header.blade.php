@@ -55,14 +55,14 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!--<img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">-->
-              <img src="{{ asset('avatar/'.Auth::user()->avatar)}}" class="user-image" alt="User Image">
+              <img src="{{ asset('avatar/'.Auth::user()->avatar)}}" class="user-image" alt="None">
               <span class="hidden-xs">{{ Auth::user()->name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
                 <!--<img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">-->
-                <img src="{{ asset('avatar/'.Auth::user()->avatar)}}" class="img-circle" alt="User Image">
+                <img src="{{ asset('avatar/'.Auth::user()->avatar)}}" class="img-circle" alt="No disponible">
                 <p>
                   {{ Auth::user()->firstname }}
                   {{ Auth::user()->lastname  }}
@@ -73,7 +73,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="" class="btn btn-success btn-flat">Perfil</a>
+                  <a href="{{ route('users.edit', Auth::user()->id) }}" class="btn btn-success btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
                   <a href="{{ route('logout') }}" class="btn btn-danger btn-flat"

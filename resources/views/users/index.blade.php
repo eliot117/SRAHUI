@@ -15,11 +15,11 @@
             <thead>
             <tr>
               <th>Id</th>
-              <th>Nombre</th>
+              <th>Usuario</th>
               <th>Correo</th>
+              <th>Nombre</th>
               <th>Creado</th>
               <th>Actualizado</th>
-              <th>Editar</th>
               @can('user_delete')
               <th>Eliminar</th>
               @endcan
@@ -34,11 +34,9 @@
                       {{ $user->name }}</a>
                   </td>
                   <td>{{ $user->email }}</td>
+                  <td>{{ $user->firstname }}</td>
                   <td>{{ $user->created_at }}</td>
                   <td>{{ $user->updated_at }}</td>
-                  @can('user_edit', Permission::class)
-                  <td><a class="btn btn-primary" href="{{ route('users.edit', $user->id) }}">Editar</a></td>
-                  @endcan
                   @can('user_delete', Permission::class)
                   <td>
                     <form method="POST" action="{{ route('users.destroy', $user->id)}}">

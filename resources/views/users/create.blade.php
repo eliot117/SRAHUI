@@ -13,7 +13,7 @@
           @csrf
           <div class="box-body">
             <div class="form-group">
-              <label for="name">Nombre Completo</label>
+              <label for="name">Nombre</label>
               <input type="text" name="name" class="form-control" placeholder="Ingrese nombre" value="{{ old('name') }}">
               @error('name')
                 <span class="invalid-feedback" role="alert">

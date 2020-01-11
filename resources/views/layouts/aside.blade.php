@@ -6,7 +6,7 @@
       <div class="user-panel">
         <div class="pull-left image">
          <!--<img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">-->
-         <img src="{{ asset('avatar/'.Auth::user()->avatar)}}" class="img-circle" alt="User Image">
+         <img src="{{ asset('avatar/'.Auth::user()->avatar)}}" class="img-circle" alt="No disponible">
         </div>
         <div class="pull-left info">
           <p>{{ Auth::user()->name }}</p>

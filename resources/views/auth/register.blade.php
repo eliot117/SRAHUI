@@ -36,7 +36,7 @@
     <form method="POST" action="{{ route('register') }}">
       @csrf
       <div class="form-group has-feedback">
-        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nombre Completo">
+        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nombre">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
         @error('name')
           <span class="invalid-feedback" role="alert">

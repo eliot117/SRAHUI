@@ -30,7 +30,7 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{{ asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
 </head>
-<body class="hold-transition skin-green sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
       @include('layouts.header')
       @include('layouts.aside')

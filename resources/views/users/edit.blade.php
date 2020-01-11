@@ -7,7 +7,7 @@
     <div class="col-md-12">
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Crear Nuevo Usuario</h3>
+          <h3 class="box-title">Editar Datos</h3>
         </div>
         <form role="form" method="POST" action="{{ route('users.update', $users->id) }}" enctype="multipart/form-data">
           @csrf
