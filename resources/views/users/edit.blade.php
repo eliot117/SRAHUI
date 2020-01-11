@@ -60,7 +60,7 @@
             </div>
             <div class="form-group">
               <label id="avatar">Avatar</label>
-              <input type="file" name="avatar" class="form-control" placeholder="Ingrese Imagen" value="{{ $users->avatar }}">
+              <input type="file" name="avatar" class="form-control" value="{{ $users->avatar }}">
               @error('avatar')
               <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>

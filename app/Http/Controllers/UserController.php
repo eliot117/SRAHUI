@@ -48,7 +48,8 @@ class UserController extends Controller
     {
         $users = User::findOrFail($id);
         
-        if($request->hasFile('avatar')){
+        if($request->hasFile('avatar'))
+        {
             $file = $request->file('avatar');
             $name = time().$file->getClientOriginalName();
             $file->move(public_path('avatar/'), $name);
@@ -62,7 +63,6 @@ class UserController extends Controller
             "lastname"  => $request->input('lastname'),
             "avatar"    => $name,
         ]);
-        
         return redirect()->route('users.index');
     }
 
