@@ -14,19 +14,28 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/mystyle.css')}}" rel="stylesheet">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
     @extends('layouts.navbarInicio')
     @section('content')
-     <img srcset="img/fondo.png 1295w">
-    
-    
-    
-     <br>
+    <main id="fullpage">
+		<header class="section header">
+			<video loop data-autoplay class="bg-video">
+				<source src="img/fondo.mp4" type="video/mp4">
+			</video>
+		</header>
+    </main>
+    <br>
      <footer>
          Derechos Reservados ITVH 2019
      </footer>
     @endsection
+    
+    <script src="js/fullpage.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/video.js"></script>
 </body>
 </html>
