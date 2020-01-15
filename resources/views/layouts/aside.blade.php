@@ -54,6 +54,16 @@
           </ul>
         </li>
         <li class="treeview">
+          <a href="">
+            <i class="fa fa-archive"></i><span>Datos</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href=""><i class="glyphicon glyphicon-edit"></i>Inserte Plaga</a></li>
+            <li><a href=""><i class="fa fa-list-alt"></i>Lista de Plagas</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-edit"></i> <span>Riego Datos</span>
             <i class="fa fa-angle-left pull-right"></i>

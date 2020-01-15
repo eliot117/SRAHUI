@@ -16,18 +16,5 @@ class UsersTableSeeder extends Seeder
         
         // Asignación del rol
         $user->assignRole('administrator');
-        /*
-        factory(User::class, 2)->create()->each(function($u) 
-        {
-            if ($u->id == 1) 
-            {
-              $u->assignRole('administrator');
-            } 
-            else 
-            {
-              $u->assignRole('student');
-            }
-          });
-          factory(Crop::class, 1)->create(['user_id'=>1]);*/
     }
 }
