@@ -32,6 +32,15 @@
             @enderror
           </div>
           <div class="form-group">
+            <label for="epoch">Epoca</label>
+            <input type="text" name="name_epoch" class="form-control" placeholder="Ingrese un nombre" value="{{ $crops->epoch ? $crops->epoch->name_epoch : 'Ingrese Epoca'}}">
+            @error('name_epoch')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+            @enderror
+          </div>
+          <div class="form-group">
             <label for="description">Descripción</label>
             <textarea type="textarea" name="description" class="form-control" placeholder="Ingrese una descripción">{{ $crops->description }}</textarea>
             @error('description')
@@ -42,7 +51,7 @@
           </div>
           <div class="form-group">
             <label for="file">Imagen Cultivo</label>
-            <input type="file" name="image_crop" class="form-control" placeholder="Ingrese una imagen" value="{{ $crops->image_crop }}">
+            <input type="file" name="image_crop" class="form-control" value="{{ $crops->image_crop or old('image_crop') }}">
             @error('image_crop')
               <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>

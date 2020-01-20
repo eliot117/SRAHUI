@@ -10,6 +10,7 @@
     <div class="box-body">
       <p>Nombre:            {{ $crops->name }}</p>
       <p>Nombre Cientifico: {{ $crops->name_scientific }}</p>
+      <p>Epoca Cultivo:     {{ $crops->epoch ? $crops->epoch->name_epoch : 'Sin epoca'}}</p>
       <p>Descripcion:       {{ $crops->description }}</p>
       <p><img src="{{ asset('crop/'.$crops->image_crop)}}" class="img-fluid" alt=""></p> 
     </div>

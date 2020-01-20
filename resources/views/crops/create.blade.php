@@ -31,6 +31,15 @@
               @enderror
             </div>
             <div class="form-group">
+              <label for="epoch">Epoca</label>
+              <input type="text" name="name_epoch" class="form-control" placeholder="Ingrese un nombre" value="{{ old('name_epoch') }}">
+              @error('name_epoch')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+            <div class="form-group">
               <label for="description">Descripción</label>
               <textarea type="textarea" name="description" class="form-control" placeholder="Ingrese una descripción">{{old('description')}}</textarea>
               @error('description')
