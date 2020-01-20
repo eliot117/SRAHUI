@@ -30,7 +30,7 @@ class UserController extends Controller
 
         $users->assignRole('student');
 
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('success','Usuario creado');
     }
 
     public function show($id)
@@ -56,20 +56,20 @@ class UserController extends Controller
             $file->move(public_path('avatar/'), $name);
         }
 
-        $users->update([
-            "name"      => $request->input('name'),
-            "email"     => $request->input('email'),
-            "password"  => Hash::make($request['password']),
-            "firstname" => $request->input('firstname'),
-            "lastname"  => $request->input('lastname'),
-            "avatar"    => $name,
-        ]);
-        return redirect()->route('users.index');
+        $users->name          = $request->input('name');
+        $users->email         = $request->input('email');
+        $users->password      = Hash::make($request->input('password'));
+        $users->firstname     = $request->input('firstname');
+        $users->lastname      = $request->input('lastname');
+        $users->avatar        = $name;
+        $users->save();
+            
+        return redirect()->route('users.index')->with('success','Usuario Actualizado');  
     }
 
     public function destroy($id)
     {
         User::findOrFail($id)->delete();
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('warning','Usuario Eliminado');
     }
 }

@@ -29,8 +29,11 @@
     <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker-bs3.css')}}">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{{ asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
+      @include('sweet::alert')
     <div class="wrapper">
       @include('layouts.header')
       @include('layouts.aside')

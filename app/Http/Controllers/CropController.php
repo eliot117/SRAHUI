@@ -24,7 +24,6 @@ class CropController extends Controller
         if($request->hasFile('image_crop')){
             $file = $request->file('image_crop');
             $name = time().$file->getClientOriginalName();
-            //$file->move(public_path().'/storage/',$name);
             $file->move(public_path('crop/'), $name);
         }
 
@@ -35,7 +34,7 @@ class CropController extends Controller
         $crops->image_crop = $name;
         $crops->save();
 
-        return redirect()->route('crops.index');
+        return redirect()->route('crops.index')->with('success','Cultivo Nuevo');
     }
 
     public function show($id)
@@ -57,7 +56,6 @@ class CropController extends Controller
         if($request->hasFile('image_crop')){
             $file = $request->file('image_crop');
             $name = time().$file->getClientOriginalName();
-            //$file->move(public_path().'/storage/',$name);
             $file->move(public_path('crop/'), $name);
         }
 
@@ -68,12 +66,12 @@ class CropController extends Controller
             "image_crop"      => $name,
         ]);
         
-        return redirect()->route('crops.index');
+        return redirect()->route('crops.index')->with('success','Cultivo Actualizado');
     }
 
     public function destroy($id)
     {
         Crop::findOrFail($id)->delete();
-        return redirect()->route('crops.index');
+        return redirect()->route('crops.index')->with('warning','Cultivo Eliminado');
     }
 }
