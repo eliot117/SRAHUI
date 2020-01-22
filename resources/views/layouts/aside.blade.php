@@ -5,7 +5,6 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-         <!--<img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">-->
          <img src="{{ asset('avatar/'.Auth::user()->avatar)}}" class="img-circle" alt="No disponible">
         </div>
         <div class="pull-left info">
@@ -69,12 +68,12 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i>Sensor de Humedad</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i>Sensor de Lluvia</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i>Senssor de Tierra</a></li>
+          <li><a href="#"><i class="fa fa-tint"></i>Sensor de Humedad</a></li>
+          <li><a href="#"><i class="fa fa-umbrella"></i>Sensor de Lluvia</a></li>
+          <li><a href="#"><i class="fa fa-road"></i>Senssor de Tierra</a></li>
           </ul>
         </li>
       </ul>
     </section>
     <!-- /.sidebar -->
-  </aside>
+</aside>

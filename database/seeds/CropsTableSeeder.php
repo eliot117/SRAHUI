@@ -8,16 +8,16 @@ class CropsTableSeeder extends Seeder
     public function run()
     {
         $crop = Crop::create([
-            'name_scientific' => 'Tomate',
-            'name'            => 'Solanum lycopersicum',
+            'name_scientific' => 'Solanum lycopersicum',
+            'name'            => 'Tomate',
             'description'     => 'Tomate o Jitomate Planta comestible oriunda de América 
             que hoy es consumida en el mundo entero. Exixte una gran cantidad de 
             Variedades de Tomates y se cultiva comercialmente en gran parte del planeta.'
         ]);
 
         $crop= Crop::create([
-            'name_scientific' => 'Cucurbita maxima',
-            'name'            => 'Calabazin',
+            'name_scientific' => 'Calabazin',
+            'name'            => 'Cucurbita maxima',
             'description'     => 'Las calabazas de verano y los calabacines, así como
             todas las calabazas de invierno, pertenecen a la misma especie botánica, 
             que no hay que confundir con la calabaza vinatera, del peregrino o porongo
