@@ -11,7 +11,7 @@ class CreateTypeFamilyTable extends Migration
         Schema::create('type_family', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('namefamily',80);
-            $table->text('description');
+            $table->text('description_family');
             $table->timestamps();
         });
     }

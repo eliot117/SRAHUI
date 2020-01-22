@@ -14,4 +14,9 @@ class Crop extends Model
     {
         return $this->hasOne(Epoch::class,'id');
     }
+
+    public function family()
+    {
+        return $this->hasOne(Family::class,'id');
+    }
 }

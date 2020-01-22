@@ -16,8 +16,8 @@ class CropsTableSeeder extends Seeder
         ]);
 
         $crop= Crop::create([
-            'name_scientific' => 'Calabazin',
-            'name'            => 'Cucurbita maxima',
+            'name_scientific' => 'Cucurbita maxima',
+            'name'            => 'Calabazin',
             'description'     => 'Las calabazas de verano y los calabacines, así como
             todas las calabazas de invierno, pertenecen a la misma especie botánica, 
             que no hay que confundir con la calabaza vinatera, del peregrino o porongo

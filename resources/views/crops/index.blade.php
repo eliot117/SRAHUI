@@ -17,6 +17,7 @@
               <th>Nombre Cientifico</th>
               <th>Nombre</th>
               <th>Epoca</th>
+              <th>Familia</th>
               <th>Actualizado</th>
               @can('crop_edit')
               <th>Editar</th>  
@@ -36,6 +37,7 @@
                   </td>
                   <td>{{ $crop->name }}</td>
                   <td>{{ $crop->epoch ? $crop->epoch->name_epoch : 'Sin epoca'}}</td>
+                  <td>{{ $crop->family ? $crop->family->namefamily: 'Sin dato' }}</td>
                   <td>{{ $crop->updated_at }}</td>
                   @can('crop_edit')
                   <td><a class="btn btn-primary" href="{{ route('crops.edit', $crop->id) }}">Editar</a></td>

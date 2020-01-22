@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Crop;
 use App\Epoch;
+use App\Family;
 use Illuminate\Http\Request;
 
 class CropController extends Controller
@@ -11,7 +12,7 @@ class CropController extends Controller
 
     public function index()
     {
-        $crops = Crop::with(['epoch'])->get();
+        $crops = Crop::with(['epoch','family'])->get();
         return view('crops.index', compact('crops'));
     }
 
@@ -37,6 +38,11 @@ class CropController extends Controller
 
         $crops->epoch()->create([
             'name_epoch' => $request->input('name_epoch'),
+        ]);
+
+        $crops->family()->create([
+            'namefamily'  => $request->input('namefamily'),
+            'description' => $request->input('description')
         ]);
 
         return redirect()->route('crops.index')->with('success','Cultivo Nuevo');
@@ -71,10 +77,19 @@ class CropController extends Controller
             "image_crop"      => $name,
         ]);
         
-        $crops->epoch()->create([
-            'name_epoch' => $request->input('name_epoch'),
-        ]);
-        
+        if(is_null($crops->epoch()))
+        {
+            $crops->epoch()->create([
+                'name_epoch' => $request->input('name_epoch'),
+            ]);
+        }
+        else
+        {
+            $crops->epoch()->update([
+                'name_epoch' => $request->input('name_epoch'),
+            ]);
+        }
+
         return redirect()->route('crops.index')->with('success','Cultivo Actualizado');
     }
 

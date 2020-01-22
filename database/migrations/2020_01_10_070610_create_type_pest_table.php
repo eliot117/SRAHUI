@@ -11,7 +11,7 @@ class CreateTypePestTable extends Migration
         Schema::create('type_pest', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name_pest',80);
-            $table->text('description');
+            $table->text('description_pest');
             $table->timestamps();
         });
     }
