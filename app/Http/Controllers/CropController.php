@@ -41,8 +41,8 @@ class CropController extends Controller
         ]);
 
         $crops->family()->create([
-            'namefamily'  => $request->input('namefamily'),
-            'description' => $request->input('description')
+            'namefamily'         => $request->input('namefamily'),
+            'description_family' => $request->input('description_family'),
         ]);
 
         return redirect()->route('crops.index')->with('success','Cultivo Nuevo');
@@ -77,9 +77,9 @@ class CropController extends Controller
             "image_crop"      => $name,
         ]);
         
-        if(is_null($crops->epoch()))
+        if (is_null($crops->epoch()->first())) 
         {
-            $crops->epoch()->create([
+            $crops->epoch()->updateOrCreate([
                 'name_epoch' => $request->input('name_epoch'),
             ]);
         }
@@ -87,6 +87,21 @@ class CropController extends Controller
         {
             $crops->epoch()->update([
                 'name_epoch' => $request->input('name_epoch'),
+            ]);
+        }
+        
+        if (is_null($crops->family()->first())) 
+        {
+            $crops->family()->updateOrCreate([
+                'namefamily'         => $request->input('namefamily'),
+                'description_family' => $request->input('description_family'),
+            ]);
+        }
+        else
+        {
+            $crops->family()->update([
+                'namefamily'         => $request->input('namefamily'),
+                'description_family' => $request->input('description_family'),
             ]);
         }
 
@@ -97,6 +112,7 @@ class CropController extends Controller
     {
         Crop::findOrFail($id)->delete();
         Epoch::findOrFail($id)->delete();
+        Family::findOrFail($id)->delete();
         return redirect()->route('crops.index')->with('warning','Cultivo Eliminado');
     }
 }

@@ -49,9 +49,9 @@
               @enderror
             </div>
             <div class="form-group">
-              <label for="description">Descripción</label>
-              <textarea type="textarea" name="description" class="form-control" placeholder="Ingrese una descripción">{{old('description')}}</textarea>
-              @error('description')
+              <label for="description_family">Descripción Familia</label>
+              <textarea type="textarea" name="description_family" class="form-control" placeholder="Ingrese una descripción del cultivo">{{ old('description_family') }}</textarea>
+              @error('description_family')
                 <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
                 </span>

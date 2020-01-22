@@ -41,6 +41,24 @@
             @enderror
           </div>
           <div class="form-group">
+            <label for="namefamily">Familia</label>
+            <input type="text" name="namefamily" class="form-control" placeholder="Ingrese un nombre" value="{{ $crops->family ? $crops->family->namefamily : 'Sin datos'}}">
+            @error('namefamily')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+            @enderror
+          </div>
+          <div class="form-group">
+            <label for="description_family">Descripción Familia</label>
+            <textarea type="textarea" name="description_family" class="form-control" placeholder="Ingrese una descripción">{{ $crops->family ? $crops->family->description_family : 'No data' }}</textarea>
+            @error('description_family')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+            @enderror
+          </div>
+          <div class="form-group">
             <label for="description">Descripción</label>
             <textarea type="textarea" name="description" class="form-control" placeholder="Ingrese una descripción">{{ $crops->description }}</textarea>
             @error('description')

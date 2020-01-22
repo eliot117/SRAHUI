@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Pest extends Model
 {
     protected $table    = 'type_pest';
-    protected $fillable = ['name_pest','description'];
+    protected $fillable = ['name_pest','description_pest'];
 }
