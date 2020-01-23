@@ -18,7 +18,8 @@
       <p>Tipo de Planta:         {{ $crops->plant  ? $crops->plant->type_plant          : 'Sin tipo'}}</p>
       <p>Breve Descripción:      {{ $crops->plant  ? $crops->plant->description_plant   : 'Sin descripción'}}</p>
       <p>Descripción Cultivo: {{ $crops->description }}</p>
-      <img src="{{ asset('crop/'.$crops->image_crop)}}" class="img-fluid" alt="">
+      <img src="{{ asset('crop/'.$crops->image_crop)}}" class="img-fluid" alt=""><br><br>
+      <a class="btn btn-primary" href="{{ route('crops.index') }}">Regresar</a>
     </div>
 </div>
 @endcan
