@@ -15,6 +15,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">Panel Administrativo</li>
+        @role('administrator')
         <li class="treeview">
           <a href="{{ route('users.index') }}">
             <i class="fa fa-male"></i>
@@ -22,12 +23,11 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            @role('administrator')
             <li><a href="{{ route('users.create') }}"><i class="glyphicon glyphicon-edit"></i>Crear Usuarios</a></li>
-            @endrole
             <li><a href="{{ route('users.index') }}"><i class="fa fa-list-alt"></i>Lista de Usuarios</a></li>
           </ul>
         </li>
+        @endrole
         @role('administrator')
         <li class="treeview">
           <a href="{{ route('roles.index') }}">

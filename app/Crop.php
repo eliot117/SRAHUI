@@ -19,4 +19,14 @@ class Crop extends Model
     {
         return $this->hasOne(Family::class,'id');
     }
+
+    public function pest()
+    {
+        return $this->hasOne(Pest::class,'id');
+    }
+
+    public function plant()
+    {
+        return $this->hasOne(Plant::class,'id');
+    }
 }

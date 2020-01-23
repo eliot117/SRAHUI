@@ -10,8 +10,8 @@ class CreateTypePlantTable extends Migration
     {
         Schema::create('type_plant', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('hortalizas',80);
-            $table->string('legumbres',80);
+            $table->string('type_plant',80);
+            $table->text('description_plant');
             $table->timestamps();
         });
     }

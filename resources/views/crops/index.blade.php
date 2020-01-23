@@ -18,6 +18,8 @@
               <th>Nombre</th>
               <th>Epoca</th>
               <th>Familia</th>
+              <th>Tipo Planta</th>
+              <th>Tipo Plaga</th>
               <th>Actualizado</th>
               @can('crop_edit')
               <th>Editar</th>  
@@ -36,8 +38,10 @@
                       {{ $crop->name_scientific }}</a>
                   </td>
                   <td>{{ $crop->name }}</td>
-                  <td>{{ $crop->epoch ? $crop->epoch->name_epoch : 'Sin epoca'}}</td>
-                  <td>{{ $crop->family ? $crop->family->namefamily: 'Sin dato' }}</td>
+                  <td>{{ $crop->epoch  ? $crop->epoch->name_epoch  : 'Sin dato' }}</td>
+                  <td>{{ $crop->family ? $crop->family->namefamily : 'Sin dato' }}</td>
+                  <td>{{ $crop->plant  ? $crop->plant->type_plant  : 'Sin dato' }}</td>
+                  <td>{{ $crop->pest   ? $crop->pest->name_pest    : 'Sin dato' }}</td>
                   <td>{{ $crop->updated_at }}</td>
                   @can('crop_edit')
                   <td><a class="btn btn-primary" href="{{ route('crops.edit', $crop->id) }}">Editar</a></td>

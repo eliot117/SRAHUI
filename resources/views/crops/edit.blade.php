@@ -7,7 +7,7 @@
   <div class="col-md-12">
     <div class="box box-primary">
       <div class="box-header with-border">
-        <h3 class="box-title">Insertar un Cultivo</h3>
+        <h3 class="box-title">Actualizar un Cultivo</h3>
       </div>
       <form role="form" method="POST" action="{{ route('crops.update',$crops->id) }}" enctype="multipart/form-data">
         @csrf
@@ -59,7 +59,43 @@
             @enderror
           </div>
           <div class="form-group">
-            <label for="description">Descripción</label>
+            <label for="name_pest">Tipo de Plaga</label>
+            <input type="text" name="name_pest" class="form-control" placeholder="Ingrese plaga" value="{{ $crops->pest ? $crops->pest->name_pest : 'No data' }}">
+            @error('name_pest')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+            @enderror
+          </div>
+          <div class="form-group">
+            <label for="description_pest">Descripción de la Plaga</label>
+            <textarea type="textarea" name="description_pest" class="form-control" placeholder="Describa la plaga">{{ $crops->pest ? $crops->pest->description_pest : 'No data' }}</textarea>
+            @error('description_pest')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+            @enderror
+          </div>
+          <div class="form-group">
+            <label for="type_plant">Tipo de Planta</label>
+            <input type="text" name="type_plant" class="form-control" placeholder="Ingrese planta" value="{{ $crops->plantt ? $crops->plant->type_plant : 'No data' }}">
+            @error('type_plant')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+            @enderror
+          </div>
+          <div class="form-group">
+            <label for="description_plant">Breve descripción</label>
+            <textarea type="textarea" name="description_plant" class="form-control" placeholder="Describa">{{ $crops->plant ? $crops->plant->description_plant : 'No data' }}</textarea>
+            @error('description_plant')
+              <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+            @enderror
+          </div>
+          <div class="form-group">
+            <label for="description">Descripción de cultivo</label>
             <textarea type="textarea" name="description" class="form-control" placeholder="Ingrese una descripción">{{ $crops->description }}</textarea>
             @error('description')
               <span class="invalid-feedback" role="alert">
@@ -78,6 +114,7 @@
           </div>
         </div>
         <div class="box-footer">
+          <a class="btn btn-warning" href="{{ route('crops.index')}}">Regresar</a>
           <button type="submit" class="btn btn-primary" value="Enviar">Guardar</button>
         </div>
       </form>

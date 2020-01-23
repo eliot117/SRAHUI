@@ -12,7 +12,7 @@ class CropController extends Controller
 
     public function index()
     {
-        $crops = Crop::with(['epoch','family'])->get();
+        $crops = Crop::with(['epoch','family','pest'])->get();
         return view('crops.index', compact('crops'));
     }
 
@@ -43,6 +43,16 @@ class CropController extends Controller
         $crops->family()->create([
             'namefamily'         => $request->input('namefamily'),
             'description_family' => $request->input('description_family'),
+        ]);
+
+        $crops->pest()->create([
+            'name_pest'         => $request->input('name_pest'),
+            'description_pest'  => $request->input('description_pest'),
+        ]);
+
+        $crops->plant()->create([
+            'type_plant'         => $request->input('type_plant'),
+            'description_plant'  => $request->input('description_plant'),
         ]);
 
         return redirect()->route('crops.index')->with('success','Cultivo Nuevo');
@@ -105,6 +115,36 @@ class CropController extends Controller
             ]);
         }
 
+        if(is_null($crops->pest()->first()))
+        {
+            $crops->pest()->updateOrCreate([
+                'name_pest'         => $request->input('name_pest'),
+                'description_pest' => $request->input('description_pest'),
+            ]);
+        }
+        else
+        {
+            $crops->pest()->update([
+                'name_pest'         => $request->input('name_pest'),
+                'description_pest' => $request->input('description_pest'),
+            ]);
+        }
+
+        if(is_null($crops->plant()->first()))
+        {
+            $crops->plant()->updateOrCreate([
+                'type_plant'        => $request->input('type_plant'),
+                'description_plant' => $request->input('description_plant'),
+            ]);
+        }
+        else
+        {
+            $crops->plant()->update([
+                'type_plant'        => $request->input('type_plant'),
+                'description_plant' => $request->input('description_plant'),
+            ]);
+        }
+
         return redirect()->route('crops.index')->with('success','Cultivo Actualizado');
     }
 
@@ -113,6 +153,8 @@ class CropController extends Controller
         Crop::findOrFail($id)->delete();
         Epoch::findOrFail($id)->delete();
         Family::findOrFail($id)->delete();
+        Pest::findOrFail($id)->delete();
+        Plant::findOrFail($id)->delete();
         return redirect()->route('crops.index')->with('warning','Cultivo Eliminado');
     }
 }

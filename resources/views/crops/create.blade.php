@@ -49,7 +49,7 @@
               @enderror
             </div>
             <div class="form-group">
-              <label for="description_family">Descripción Familia</label>
+              <label for="description_family">Descripción de la Familia</label>
               <textarea type="textarea" name="description_family" class="form-control" placeholder="Ingrese una descripción del cultivo">{{ old('description_family') }}</textarea>
               @error('description_family')
                 <span class="invalid-feedback" role="alert">
@@ -58,7 +58,43 @@
               @enderror
             </div>
             <div class="form-group">
-              <label for="description">Descripción</label>
+              <label for="name_pest">Tipo de Plaga</label>
+              <input type="text" name="name_pest" class="form-control" placeholder="Ingrese plaga" value="{{ old('name_pest') }}">
+              @error('name_pest')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+            <div class="form-group">
+              <label for="description_pest">Descripción de la Plaga</label>
+              <textarea type="textarea" name="description_pest" class="form-control" placeholder="Describa la plaga">{{ old('description_pest') }}</textarea>
+              @error('description_pest')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+            <div class="form-group">
+              <label for="type_plant">Tipo de Planta</label>
+              <input type="text" name="type_plant" class="form-control" placeholder="Ingrese planta" value="{{ old('type_plant') }}">
+              @error('type_plant')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+            <div class="form-group">
+              <label for="description_plant">Breve Descripción</label>
+              <textarea type="textarea" name="description_plant" class="form-control" placeholder="Describa">{{ old('description_plant') }}</textarea>
+              @error('description_plant')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+            <div class="form-group">
+              <label for="description">Descripción del cultivo</label>
               <textarea type="textarea" name="description" class="form-control" placeholder="Ingrese una descripción">{{old('description')}}</textarea>
               @error('description')
                 <span class="invalid-feedback" role="alert">
@@ -77,6 +113,7 @@
             </div>
           </div>
           <div class="box-footer">
+            <a class="btn btn-warning" href="{{ route('crops.index')}}">Regresar</a>
             <button type="submit" class="btn btn-primary" value="Enviar">Guardar</button>
           </div>
         </form>
