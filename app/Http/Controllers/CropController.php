@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Crop;
 use App\Epoch;
 use App\Family;
+use App\Plant;
 use Illuminate\Http\Request;
 
 class CropController extends Controller
 {
-
     public function index()
     {
         $crops = Crop::with(['epoch','family','pest'])->get();

@@ -21,17 +21,11 @@
 
     @extends('layouts.navbarInicio')
     @section('content')
-    <main id="fullpage">
-		<header class="section header">
-			<video loop data-autoplay class="bg-video">
-				<source src="img/fondo.mp4" type="video/mp4">
-			</video>
-		</header>
-    </main>
-    <br>
-     <footer>
-         Derechos Reservados ITVH 2019
-     </footer>
+    <img src="img/cesped.png" class="img-fluid">
+    
+    <footer>
+        Derechos Reservados ITVH 2019
+    </footer>
     @endsection
     
     <script src="js/fullpage.js"></script>
