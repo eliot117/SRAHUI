@@ -63,14 +63,14 @@
           </ul>
         </li>-->
         <li class="treeview">
-          <a href="#">
+          <a href="{{ route('sensors.index') }}">
             <i class="fa fa-edit"></i> <span>Riego Datos</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-tint"></i>Sensor de Humedad</a></li>
-          <li><a href="#"><i class="fa fa-umbrella"></i>Sensor de Lluvia</a></li>
-          <li><a href="#"><i class="fa fa-road"></i>Senssor de Tierra</a></li>
+          <li><a href="{{ route('sensors.index') }}"><i class="fa fa-tint"></i>Sensor de Humedad</a></li>
+          <li><a href="{{ route('sensors.index') }}"><i class="fa fa-umbrella"></i>Sensor de Lluvia</a></li>
+          <li><a href="{{ route('sensors.index') }}"><i class="fa fa-road"></i>Senssor de Tierra</a></li>
           </ul>
         </li>
       </ul>
