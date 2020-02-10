@@ -18,34 +18,35 @@ class SensorController extends Controller
         $sensors = Sensor::all();
         return view('sensors.index', compact('sensors'));
     }
-
-    public function create()
+    
+    public function add(Request $request)
     {
-        //
+        $sensors = new Sensor();
+        $sensors->temperature = $request->input('temperature');
+        $sensors->humidity    = $request->input('humidity');
+        $sensors->ground      = $request->input('ground');
+        $sensors->save();
+
+        return $sensors;
     }
 
-    public function store(Request $request)
+    public function get($id)
     {
-        //
+       $sensors = Sensor::findOrFail($id);
+       return $sensors;
     }
 
-    public function show($id)
+    public function edit($id, Request $request)
     {
-        //
+       $sensors = $this->get($id);
+       $sensors->fill($request->all())->save();
+       return $sensors;
     }
 
-    public function edit($id)
+    public function delete($id)
     {
-        //
-    }
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    public function destroy($id)
-    {
-        //
+       $sensors = $this->get($id);
+       $sensors->delete();
+       return $sensors;
     }
 }
