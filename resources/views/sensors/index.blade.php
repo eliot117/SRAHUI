@@ -6,7 +6,6 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header">
-          <!--<h3 class="box-title">Datos de los cultivos</h3>-->
           <a class="btn btn-warning">Detener</a>
           <a class="btn btn-success">Regar</a>
         </div>
@@ -35,7 +34,6 @@
               @endforeach
             </tbody>
           </table>
-          
         </div>
       </div>
   </div>
