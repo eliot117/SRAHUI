@@ -18,7 +18,13 @@ class SensorController extends Controller
         $sensors = Sensor::all();
         return view('sensors.index', compact('sensors'));
     }
-    
+
+    public function show($id)
+    {
+        $sensors = Sensor::findOrFail($id);
+        return view('sensors.show', compact('sensors'));
+    }
+
     public function add(Request $request)
     {
         $sensors = new Sensor();

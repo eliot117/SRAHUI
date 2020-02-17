@@ -24,7 +24,10 @@
             <tbody>
               @foreach ($sensors as $sensor)
                <tr>
-                  <td>{{ $sensor->id }}</td>
+                  <td>
+                    <a href="{{ route('sensors.show', $sensor->id) }}">
+                    {{ $sensor->id }}
+                  </td>
                   <td>{{ $sensor->temperature}} °</td>
                   <td>{{ $sensor->humidity}}    %</td>
                   <td>{{ $sensor->ground }}     %</td>
